@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="false" id="9eee-b9ef-b588-015e" name="Goregrinders" gameSystemId="sys-8df6-50db-7b5c-4327" gameSystemRevision="3" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <forceEntries>
+    <forceEntry name="Black Mass" id="9fcd-d0ae-c5a5-d928" hidden="false">
+      <categoryLinks>
+        <categoryLink name="Necromancer" hidden="false" id="929f-27b3-cfe4-f11f" targetId="3cc8-db02-fde9-08e2"/>
+        <categoryLink name="Goregrinders" hidden="false" id="0719-3519-b3c4-cdae" targetId="5af0-cb14-7924-1f8a" type="category"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="Max 3 Scions" field="error">
+          <conditions>
+            <condition type="greaterThan" value="3" field="selections" scope="roster" childId="c411-bd0a-19ee-618a" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="Max 2 Freaks" field="error">
+          <conditions>
+            <condition type="greaterThan" value="2" field="selections" scope="roster" childId="caa5-c1c0-4099-044a" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="Max 2 Horrors" field="error">
+          <conditions>
+            <condition type="greaterThan" value="2" field="selections" scope="roster" childId="ee6d-d046-65f6-602d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="Max 2 Hunters" field="error">
+          <conditions>
+            <condition type="greaterThan" value="2" field="selections" scope="roster" childId="77f9-1904-4c54-414d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="Max 1 Tyrant" field="error">
+          <conditions>
+            <condition type="greaterThan" value="1" field="selections" scope="roster" childId="6989-702c-1324-ecad" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </forceEntry>
+  </forceEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="Necromancer Upgrades" id="fc3d-9d08-c3ef-2e8e" hidden="false"/>
+  </sharedSelectionEntryGroups>
+  <selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Warhead" hidden="false" id="c887-5490-3dbc-0e80">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="2" repeats="1" field="selections" scope="self" childId="d26e-9892-d83f-2828" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Warhead" hidden="false" id="4ec8-42e5-5a0f-171a">
+          <profiles>
+            <profile name="Warhead" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="ecbc-5132-6c0a-5118">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">1</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">3+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9001-46de-ef54-ac2b" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink targetId="d26e-9892-d83f-2828" id="0fa4-1f19-63f8-0b55" primary="false" name="Thrall"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Charge" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="823d-17c6-da13-6826">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: MOVE as far as possible in a straight line, passing through units. Then, units passed through during this move take 1 damage.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Cleave" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="80ce-fb57-37b0-c45c">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Melee, attack.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage and 1 damage to another adjacent unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Thrall" id="de71-2aea-ff3f-4a2d" hidden="false" type="profile" targetId="6d91-8f5b-427e-0608"/>
+        <infoLink name="Blood Rage" id="2169-b5c8-fcd7-53a8" hidden="false" type="profile" targetId="060e-6a92-804f-9f7a"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="928b-4531-141a-c486" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Bladed" hidden="false" id="5139-3361-50aa-8298" sortIndex="1">
+              <profiles>
+                <profile name="Bladed" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="2db5-7d32-7537-183a">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Charge has a (5+) chance to grant retaliation until the start of its next turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c0e2-4ffe-60b7-836c" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Lobotomized" hidden="false" id="0486-4c27-2025-9f3d">
+              <profiles>
+                <profile name="Lobotomized" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="6bcc-2dcf-e288-2b10">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Gain Curseproof</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="22e7-a309-fe5b-f14c" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Curseproof" id="b0d8-3746-d7d9-aab5" hidden="false" type="rule" targetId="0c07-337d-ee9c-ad9f"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Overclocked" hidden="false" id="006a-e5a2-8a00-4cd0" sortIndex="2">
+              <profiles>
+                <profile name="Overclocked" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="aab2-9d30-310b-03f7">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">At 1 hp or lower, gain free movement</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="54da-65a3-6d15-aeb6" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Free Movement" id="be5f-b877-73ad-c721" hidden="false" type="rule" targetId="caa4-cdf7-b98b-3e22"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="6e04-ead8-9bd6-4bf6" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="5af0-cb14-7924-1f8a" id="9f1c-6b3e-ebf7-da14" primary="true" name="Goregrinders"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Painwheel" hidden="false" id="3dc5-b846-324a-30c5">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="ee6d-d046-65f6-602d" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Painwheel" hidden="false" id="455a-2873-ed2d-7763">
+          <profiles>
+            <profile name="Painwheel" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="c78a-2a63-fc8f-8316">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">5</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">3+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fdef-8112-72b2-d11a" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink targetId="ee6d-d046-65f6-602d" id="bf52-72b4-609a-f70c" primary="false" name="Horror"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Spin Out" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="d943-fd47-2d82-e2f4">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Unit MOVEs as far as possible in a straight line. The first enemy unit this unit passes through during this MOVE takes 1 fire damage. Then this unit gains 2 speed.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Exfoliate" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="70bb-4748-7f66-6acf">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Melee, Attack</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage. Effect: (4+) 1 damage again. (6+) 1 damage again.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Hellwheel" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="bb00-386d-2ec6-a4e4">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">This unit may spend speed tokens as strength. May pass through units but not end their turn in their spaces.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Blood Rage" id="1915-03f0-e289-fc5a" hidden="false" type="profile" targetId="060e-6a92-804f-9f7a"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="4adf-a895-0480-724f" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Barbed Wheel" hidden="false" id="ccae-b688-8ba2-7789" sortIndex="1">
+              <profiles>
+                <profile name="Barbed Wheel" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="cd7c-9340-7704-65f2">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Spin Out may pull a unit in range 3 one space before its MOVE.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d34a-4a2b-0afd-5979" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hurtle" hidden="false" id="b700-0c5f-3335-1243">
+              <profiles>
+                <profile name="Hurtle" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="1438-42c2-f823-5570">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">At 1 hp, may MOVE again for free at any point during turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8448-55c3-29ac-db80" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Endless Screaming" hidden="false" id="9795-3389-e7c7-1710" sortIndex="2">
+              <profiles>
+                <profile name="Endless Screaming" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="9377-0fb3-4be8-915c">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Spin out grants 1 berserk.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="62d8-e1d3-d838-c072" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ab2d-2263-0069-28f9" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="5af0-cb14-7924-1f8a" id="00e4-f472-9616-4a42" primary="true" name="Goregrinders"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Berserker" hidden="false" id="3b74-b3d6-c0a7-f21e">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="6989-702c-1324-ecad" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Berserker" hidden="false" id="8c9d-cc1f-d271-d956">
+          <profiles>
+            <profile name="Berserker" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="8dd0-0df2-c74e-c451">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">6</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">2+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2f1a-2482-6c62-b3bb" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Tyrant" hidden="false" id="df5b-f265-29d0-d8da" targetId="6989-702c-1324-ecad" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Pulverize" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="4487-d141-99ff-5fef">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Pull all units in range 2 one space towards this unit. Then splash (self): 1 fire damage and destroy all adjacent walls.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Building Rage" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="ad86-46ce-638e-ff36">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self, retaliation.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Gain 1 strength and 1 berserk, (4+) then gain retaliation until end of this unit’s next turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Rip and Tear" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="ba8f-d0b2-292c-bca1">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Melee Attack</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: On hit, 2 damage. Deal 1 damage again if this unit has 3 or less hp, then deal 1 damage again if it is at 1 hp or less.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Steaming Rage" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="6048-bc51-a411-2922">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">When taking damage, gain 1 berserk and 1 strength. This effect can’t trigger more than one a round.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Tyrant" id="971f-e522-fb67-ee09" hidden="false" type="profile" targetId="d174-18f9-73dc-aeb7"/>
+        <infoLink name="Blood Rage" id="8511-1d93-366c-2096" hidden="false" type="profile" targetId="060e-6a92-804f-9f7a"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="89b7-02b1-edc3-5fd1" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Machineheart" hidden="false" id="b84c-40b2-c97c-8515" sortIndex="1">
+              <profiles>
+                <profile name="Machineheart" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="56b7-9e2c-20b4-a534">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">At 1 hp or lower, gains super armour.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ffd9-c5b3-c7b0-350b" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Bifurcate" hidden="false" id="3b79-921c-dd87-b887">
+              <profiles>
+                <profile name="Bifurcate" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="9fba-8034-6cd5-9fd5">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Rip and Tear obliterates units that it reduces to 0 hp.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="182f-7093-97e7-274e" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fuel Injectors" hidden="false" id="b579-c6a4-bc3b-6151" sortIndex="2">
+              <profiles>
+                <profile name="Fuel Injectors" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="05b4-6f32-df21-e56c">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">May step 2 before using Pulverize.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d4b-06e7-a572-5e15" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7580-3ebd-14fe-28eb" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="5af0-cb14-7924-1f8a" id="d929-005f-7b46-fdd8" primary="true" name="Goregrinders"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Carnifax" hidden="false" id="28ca-952e-c0b4-e9e5">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="c411-bd0a-19ee-618a" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Carnifax" hidden="false" id="90a6-b51d-a514-22aa">
+          <profiles>
+            <profile name="Carnifax" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="dfde-b903-d0a5-d6ae">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">3+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="863d-69a3-cd7e-ffc6" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Scion" hidden="false" id="194e-5f8f-db64-45c9" targetId="c411-bd0a-19ee-618a" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Chainsaw" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="536b-22dc-67ba-b6bf">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Melee, attack.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage, Effect: (4+): 1 damage again, (6+): 1 damage again</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Rev" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="608e-b860-f956-8c4c">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Gain 1 strength and speed (5+) and retaliation until the start of this unit’s next turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Wild Slashes" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="0045-25b7-91ff-9463">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: MOVE as far as possible in a straight line. Then, all units adjacent to any space of this MOVE take 1 fire damage.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Blood Rage" id="3d74-c89e-25ed-a67d" hidden="false" type="profile" targetId="060e-6a92-804f-9f7a"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="d809-e2de-c055-e41b" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Heavy Swing" hidden="false" id="241f-345e-e4d9-a552" sortIndex="1">
+              <profiles>
+                <profile name="Heavy Swing" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="634a-2e29-9367-cce6">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">May step 1 before and after using Chainsaw.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="21ed-3a2c-ace2-843e" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Bloody Teeth" hidden="false" id="1fed-c58f-676d-ad72">
+              <profiles>
+                <profile name="Bloody Teeth" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="14cb-3d34-2623-e250">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">At 0 hp, damage ignores all armor.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9715-f99b-2278-78e3" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Rile" hidden="false" id="e90c-135f-784e-00c5" sortIndex="2">
+              <profiles>
+                <profile name="Rile" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="8b45-7497-f4b7-ca12">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Rev grants one (5+) or two berserk.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e28a-bb83-c203-8b57" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ac5e-5931-c5d7-723a" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="5af0-cb14-7924-1f8a" id="c841-9e28-7fb6-1cd3" primary="true" name="Goregrinders"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Pain Ghoul" hidden="false" id="999d-4b62-fdbe-513a">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="caa5-c1c0-4099-044a" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Pain Ghoul" hidden="false" id="8c06-f30f-c303-3cf0">
+          <profiles>
+            <profile name="Pain Ghoul" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="6234-fbf0-8816-f801">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">3+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6b87-0df6-cb27-8be9" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink targetId="caa5-c1c0-4099-044a" id="4d29-5009-0b1d-21a1" primary="false" name="Freak"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Meat Hook" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="1a51-e747-487d-bd32">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Pull, Range 2-3</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Pull unit 3</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Pain Frenzy" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="8451-1d3e-d84f-9f69">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Curse, Range 3.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Unit gains 2 berserk or 2 speed.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Cauterize" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="1978-2717-f908-d781">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Curse, Range 3.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Clear all negative tokens on self or a unit, then deal 1 fire damage to them. This damage can’t slay a unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Blood Rage" id="00ab-689b-d3dc-6466" hidden="false" type="profile" targetId="060e-6a92-804f-9f7a"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="9e81-fcfe-838a-3d7c" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Stim Haze" hidden="false" id="178e-7563-ac63-2e0a" sortIndex="1">
+              <profiles>
+                <profile name="Stim Haze" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="efb0-d6d4-1832-c2f3">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01"> At 1 hp or lower, self and adjacent allies become curseproof</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a1f5-1855-6a94-d662" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Adrenaline" hidden="false" id="df20-e868-b3e1-1e81" sortIndex="3">
+              <profiles>
+                <profile name="Adrenaline" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="354e-593b-cfe0-58f6">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Allies gain 1 speed per negative token removed from Cauterize</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0cf-5865-d64b-32d6" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Frenzy Hook" hidden="false" id="1dd8-7a55-bd35-17bd" sortIndex="2">
+              <profiles>
+                <profile name="Frenzy Hook" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="04b8-9deb-c351-4393">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">At 1 hp or lower, Meat Hook can pull up to three units.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4801-78de-fabc-40d9" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d1ff-aeed-ce44-37b9" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="5af0-cb14-7924-1f8a" id="9d03-7194-b343-e13b" primary="true" name="Goregrinders"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Warlord" hidden="false" id="c5b3-03ef-c729-9ddc">
+      <categoryLinks>
+        <categoryLink name="Necromancer" hidden="false" id="ebdb-5310-0cbc-3a46" targetId="3cc8-db02-fde9-08e2" primary="true"/>
+        <categoryLink targetId="5af0-cb14-7924-1f8a" id="2692-1b7e-af0e-91ca" primary="false" name="Goregrinders"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Warlord" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="aa47-8190-1420-28f5">
+          <characteristics>
+            <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+            <characteristic name="HP" typeId="914e-de99-a8db-b243">10</characteristic>
+            <characteristic name="DF" typeId="d175-cb07-4f96-219f">3+</characteristic>
+            <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Fueled by Rage" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="52c3-8843-3101-8054">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Gain 1 berserk token at the start of your turn. You may spend berserk tokens as speed tokens.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Superheated Chainblade" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="46db-cf3e-8daa-cf3b">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, range 2-4, reload.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Attack, Melee. On hit: 1 damage, Effect: (4+): 1 fire damage again, (6+): 1 fire damage again.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Ignite" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="a311-aae9-1cef-c066">
+          <characteristics>
+            <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441">1 SOUL</characteristic>
+            <characteristic name="Description" typeId="58e5-be14-c9fc-4761">Own or allied turn, Range 3: Effect: Deal 1 fire damage to self or a unit in range, ignoring armor. That damage cannot slay them. Unit gains 1 berserk, and 1 speed.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Glory Kill" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="f0f3-c599-db29-8fe8">
+          <characteristics>
+            <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441">3 SOUL</characteristic>
+            <characteristic name="Description" typeId="58e5-be14-c9fc-4761">Own or allied turn: Effect: Obliterate an adjacent unit at 1 hp or lower. Gain 2 strength, then step 2.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Blood Rage" id="0d9c-428f-e1e3-1104" hidden="false" type="profile" targetId="060e-6a92-804f-9f7a"/>
+        <infoLink name="Vulnerability" id="f4c1-d714-d7f9-db1a" hidden="false" type="rule" targetId="12d4-7a17-5ac1-b90f"/>
+        <infoLink name="Strength" id="ff95-667e-032f-1bd3" hidden="false" type="rule" targetId="a5b3-0dfb-ad2a-e9a9"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="40ca-f2c7-0bea-f595" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1528-4fbf-afe0-2fba" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Upgrades" hidden="false" id="6d7d-8a68-3c4f-9af3" flatten="false" collective="false">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Bonus Trait" id="b8b7-adc4-bf1a-58e9" hidden="false" sortIndex="1" collapsible="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Nerve Twitch" hidden="false" id="bebd-da11-b56f-2a3d" sortIndex="1">
+                  <profiles>
+                    <profile name="Nerve Twitch" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="a769-2cc6-bccc-fe73">
+                      <characteristics>
+                        <characteristic name="Description" typeId="944b-4672-5052-d884"> At 3 hp or lower, DF increases to 5+.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="12b7-81be-6a35-b187" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Blood Rush" hidden="false" id="c3aa-a6a5-8aa1-d569" sortIndex="3">
+                  <profiles>
+                    <profile name="Blood Rush" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="e8d3-b9d2-a8ce-fc0e">
+                      <characteristics>
+                        <characteristic name="Description" typeId="944b-4672-5052-d884"> At 3 hp or lower, gain retaliation.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="130b-9577-06b7-4fae" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Blood Drinker" hidden="false" id="2626-d133-8178-627e" sortIndex="2">
+                  <profiles>
+                    <profile name="Blood Drinker" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="f8b1-e49e-3c48-138e">
+                      <characteristics>
+                        <characteristic name="Description" typeId="944b-4672-5052-d884">Slaying a unit clears a negative token.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ce3f-ca0d-979f-9c60" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="63b5-9fc9-3507-4f3a" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ea18-c9b7-c5e1-f603" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="ACT Upgrades" id="49db-ad21-e261-4c2d" hidden="false" sortIndex="2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="b2d8-daf3-e64f-8d65" includeChildSelections="true"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Quench" hidden="false" id="a254-3a1c-03cf-16be" sortIndex="1">
+                  <profiles>
+                    <profile name="Quench" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="0ec9-6579-84fe-eb32">
+                      <characteristics>
+                        <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+                        <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Convert up to 3 negative tokens on self or adjacent allies to speed or strength tokens. Then this unit becomes curseproof until the start of its next turn.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c439-4ead-e15b-1689" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Frenzy Chain" hidden="false" id="6efe-51d2-3786-fe66" sortIndex="2">
+                  <profiles>
+                    <profile name="Frenzy Chain" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="5966-78cf-981c-4f1a">
+                      <characteristics>
+                        <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 3.</characteristic>
+                        <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Pull a unit in range 2 spaces. Effect (3+): Pull another unit. (5+): Pull another unit.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d1d6-09df-25f9-dc5a" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Furious Roar" hidden="false" id="7aff-65d4-ba4a-89d4" sortIndex="3">
+                  <profiles>
+                    <profile name="Furious Roar" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="9bd3-0645-180f-2fc5">
+                      <characteristics>
+                        <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+                        <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Destroy all adjacent walls. Then, self and two other adjacent units may step 1 and gain 1 speed.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0af6-ab82-288c-6fb8" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Apoplexy" hidden="false" id="8dcc-3928-5734-3f81" sortIndex="4">
+                  <profiles>
+                    <profile name="Apoplexy" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="d4d8-a3b4-3a17-40b8">
+                      <characteristics>
+                        <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+                        <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Gain 1 strength and 1 berserk, then double all berserk and strength tokens</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d4d8-de02-51e5-06ee" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Pilebunker" hidden="false" id="6cf9-bb3b-8e60-3238" sortIndex="5">
+                  <profiles>
+                    <profile name="Pilebunker" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="50ac-7d20-c6f7-a2b7">
+                      <characteristics>
+                        <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, melee.</characteristic>
+                        <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 2 damage, then 1 fire damage again. Effect: This attack rolls -1D.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="19a8-b86a-0c30-d10b" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Saw Toothed Slayer Axe" hidden="false" id="92e8-464b-87b4-0e69" sortIndex="6">
+                  <profiles>
+                    <profile name="Saw Toothed Slayer Axe" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="66b3-9ef3-5e40-887e">
+                      <characteristics>
+                        <characteristic name="Tags" typeId="fbca-defb-da52-e439">Line 4.</characteristic>
+                        <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Line: 1 damage. If only one unit is caught in the area, increase this damage to 2 instead and this line destroys walls.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="eb03-ca10-fc7c-163d" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Spine Devil Blade" hidden="false" id="a417-54e4-008d-fc4b" sortIndex="7">
+                  <profiles>
+                    <profile name="Spine Devil Blade" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="3b01-e060-5ac7-a8e5">
+                      <characteristics>
+                        <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, melee.</characteristic>
+                        <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 fire damage. Effect: Increase this damage by +1 on hit for every 3 hp this unit is missing. If this unit is at 0 hp, this damage obliterates its target if it slays them.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3635-5a4e-e831-699e" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="SOUL Upgrades" id="2b90-9722-6b1c-b712" hidden="false" sortIndex="3">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Hellrider Kick" hidden="false" id="b22e-b5fb-4199-1055" sortIndex="1">
+                  <profiles>
+                    <profile name="Hellrider Kick" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="58aa-1de9-f045-6862">
+                      <characteristics>
+                        <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441">1 SOUL</characteristic>
+                        <characteristic name="Description" typeId="58e5-be14-c9fc-4761">Own or allied turn. Effect: MOVE with free movement, then deal 1 fire damage to an adjacent foe.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="658a-07e4-f520-eef3" includeChildSelections="true"/>
+                  </constraints>
+                  <costs>
+                    <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Overclock" hidden="false" id="dbe1-14f7-a1e5-85a5" sortIndex="2">
+                  <profiles>
+                    <profile name="Overclock" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="32b3-fdab-6d27-2811">
+                      <characteristics>
+                        <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441">1 SOUL</characteristic>
+                        <characteristic name="Description" typeId="58e5-be14-c9fc-4761">Own or allied turn, range 3. Effect: Self or unit in range gains 2 speed. If the unit is at 1 hp or lower, splash (target): 1 fire damage.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3f26-478e-e793-a514" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Gorebather" hidden="false" id="2d7f-08c4-3e68-9d66" sortIndex="3">
+                  <profiles>
+                    <profile name="Gorebather" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="0cc7-16be-624b-dd28">
+                      <characteristics>
+                        <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441">2 SOUL</characteristic>
+                        <characteristic name="Description" typeId="58e5-be14-c9fc-4761">Any turn: Trigger: You slay a unit. Effect: Step 1. All allied units anywhere may step 1.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="50e7-c23a-64bf-d6a9" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Killing Spree" hidden="false" id="7a0f-9278-63d0-a96f" sortIndex="4">
+                  <profiles>
+                    <profile name="Killing Spree" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="b663-4a5a-07e2-b856">
+                      <characteristics>
+                        <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441">3 SOULS</characteristic>
+                        <characteristic name="Description" typeId="58e5-be14-c9fc-4761">Any turn. Trigger: After a unit ACTs. Effect: Step 1, then deal 1 damage to an adjacent unit, ignoring armor. Speed can be spent to extend this step by +2. If that unit is slain, repeat this effect. It can repeat any number of times.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3ffd-4cae-72c8-ca2a" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Blood Boil" hidden="false" id="3389-88bb-cfac-9bd9" sortIndex="5">
+                  <profiles>
+                    <profile name="Blood Boil" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="02d8-f990-c666-4bbe">
+                      <characteristics>
+                        <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441">4 SOUL</characteristic>
+                        <characteristic name="Description" typeId="58e5-be14-c9fc-4761">Any turn: Trigger: Unit is slain. Effect: Unit is not slain but remains at 0 hp and becomes immune to all damage. At the end of its next turn, it explodes, obliterating it, and dealing splash (self): 1 fire damage.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="aab5-c06f-405a-5e9b" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Devil Impact" hidden="false" id="510d-9621-c48d-c2b6" sortIndex="6">
+                  <profiles>
+                    <profile name="Devil Impact" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="fea7-3828-c895-8484">
+                      <characteristics>
+                        <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441">6 SOUL</characteristic>
+                        <characteristic name="Description" typeId="58e5-be14-c9fc-4761">Deal 6 devil damage to an adjacent unit. Then deal 6 devil damage to yourself.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a865-a52f-13d2-2f4b" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="1136-376c-e6db-f695" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac6c-e3da-d244-dbde" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7570-299e-3b16-8f44" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="adc9-c7eb-92f5-33f9">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="self" childId="any" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="adc9-c7eb-92f5-33f9">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="adc9-c7eb-92f5-33f9">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="adc9-c7eb-92f5-33f9">
+              <conditions>
+                <condition type="atLeast" value="3" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+  </selectionEntries>
+  <rules>
+    <rule name="Retaliation" id="8f6b-df9a-b120-3342" hidden="false">
+      <description>After any ability resolves that damages this unit, this unit deals 1 damage back to the ability’s owner, even if this unit was slain.</description>
+    </rule>
+    <rule name="Berserk" id="f18e-962b-1d3c-542a" hidden="false">
+      <description>After a berserk unit ACTs, it splashes (self) 1 damage, then discards a berserk token. This damage can’t be increased in any way. If this effect does not damage any other characters, it deals 1 damage to itself instead, ignoring armor. Berserk counts as a positive and a negative token. </description>
+    </rule>
+  </rules>
+  <sharedProfiles>
+    <profile name="Blood Rage" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="060e-6a92-804f-9f7a">
+      <characteristics>
+        <characteristic name="Description" typeId="944b-4672-5052-d884">If a unit with this trait is reduced to 0 hp, they are not slain, but instead gain 1 strength and remain at 0 hp, no matter how much damage they took. If they take any further damage at 0 hp, they are slain as normal. </characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
+</catalogue>
