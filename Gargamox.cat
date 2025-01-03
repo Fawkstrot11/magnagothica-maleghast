@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="65b3-f32c-07d7-3ebd" name="Gargamox" gameSystemId="sys-8df6-50db-7b5c-4327" gameSystemRevision="3" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="65b3-f32c-07d7-3ebd" name="Gargamox" gameSystemId="sys-8df6-50db-7b5c-4327" gameSystemRevision="3" revision="3" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <forceEntries>
     <forceEntry name="Black Mass" id="4776-34fc-610e-7b8c" hidden="false">
       <categoryLinks>
@@ -976,19 +976,15 @@
       </selectionEntries>
     </selectionEntry>
   </selectionEntries>
-  <sharedProfiles>
-    <profile name="Plague" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="928a-f436-c19a-ab3d">
-      <characteristics>
-        <characteristic name="Description" typeId="944b-4672-5052-d884">Units affected by plague take 1 toxic damage at the end of their turn, then that unit discards a plague token. This damage cannot be reduced or ignored in any way (by tokens or armor) but cannot slay a unit. Gargamox units don’t take damage from plague and don’t remove plague tokens, but can still be affected by plague.</characteristic>
-      </characteristics>
-    </profile>
-  </sharedProfiles>
   <rules>
     <rule name="Death Burst" id="328d-eb11-ab14-3319" hidden="false">
       <description>Effect that triggers when this unit is slain.</description>
     </rule>
     <rule name="Infect" id="9677-1adc-12bd-fd78" hidden="false">
       <description>Jumps from the original target up to three times to up to three different characters, as long as each new character is adjacent to the previous.</description>
+    </rule>
+    <rule name="Plague" id="7744-0f64-8d28-7804" hidden="false">
+      <description>Units affected by plague take 1 toxic damage at the end of their turn, then that unit discards a plague token. This damage cannot be reduced or ignored in any way (by tokens or armor) but cannot slay a unit. Gargamox units don’t take damage from plague and don’t remove plague tokens, but can still be affected by plague.</description>
     </rule>
   </rules>
 </catalogue>
