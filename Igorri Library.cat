@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="true" id="8a99-b1a3-612b-fb61" name="Igorri Library" gameSystemId="sys-8df6-50db-7b5c-4327" gameSystemRevision="4" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Chop Doc" hidden="false" id="484c-d3ab-5d86-43e2">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="caa5-c1c0-4099-044a" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="72f0-12f8-9ee5-6694" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="5fa8-a199-7840-74c7" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Chop Doc" hidden="false" id="ee42-49f4-893b-b548">
+          <profiles>
+            <profile name="Chop Doc" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="e680-4ba2-fbc4-48b5">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">4+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">MAG</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a23a-2a85-5037-09cd" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Freak" hidden="false" id="1000-db31-0c06-bf4e" targetId="caa5-c1c0-4099-044a" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Inject Mutagen" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="4fb7-eaea-787b-01d5">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 3.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: One or two units in range mutate. Spare parts: and also dole out 1 strength per corpse consumed.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Leftovers" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="efcc-fa82-a705-28e1">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Has a 4+ effect chance after MOVEing to drop a corpse in a free adjacent space</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Purge" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="8035-7a25-6872-b20f">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Curse, Range 3.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: A unit in range removes one token of this unit’s choice (3+): two (5+) all.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Marriage" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="477b-5cf0-0c0c-6ed9">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 2.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Instantly slay self or an allied unit in range. Another allied unit in range gains 2 speed, vitality, and strength, or just 1 if the slain unit was a thrall.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="6653-d66e-8347-5bbd" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Absorb" hidden="false" id="ef85-4e91-fa7d-ee69" sortIndex="1">
+              <profiles>
+                <profile name="Absorb" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="3619-d9bd-da78-a32c">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">May grant one of the tokens stolen by Purge to another unit in range.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="65e9-867a-432f-0cb0" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Conjoin" hidden="false" id="7d47-7aff-5952-f3c2" sortIndex="3">
+              <profiles>
+                <profile name="Conjoin" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="c9e0-a627-690a-8535">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">IF targeting self, Marriage also clears all negative tokens on target first.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a74b-28b8-c1c6-e462" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Scour Flesh" hidden="false" id="2523-8d89-0d26-6cd6" sortIndex="2">
+              <profiles>
+                <profile name="Scour Flesh" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="88b0-e4bb-4b62-a28c">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Purge deals 1 toxic damage to foes.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="32d8-39f4-3c86-a18f" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ad33-4cfa-b887-db91" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Igorri" hidden="false" id="ae70-64ae-50e1-1be2" targetId="d1ab-0322-0ce3-aa74" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Homonculus" hidden="false" id="6ff3-3439-b56b-3507">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="6989-702c-1324-ecad" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="72f0-12f8-9ee5-6694" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="5fa8-a199-7840-74c7" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Homonculus" hidden="false" id="1301-35ab-1a10-5d54">
+          <profiles>
+            <profile name="Homonculus" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="742c-68ce-86b6-6947">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">6</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">3+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6db3-859a-d1f3-0b82" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Tyrant" hidden="false" id="d594-36b0-a4e9-14f6" targetId="6989-702c-1324-ecad" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Sculpt Flesh" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="7e80-0f40-74bb-10ca">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Gain 1 strength, OR 1 speed, OR 1 vitality. Spare parts: Repeat this effect once for each corpse consumed.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Flesh Whip" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="88d9-affa-7eee-42a6">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, Range 1-2.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage and splash (target): 1 damage and (4+) create one (6+) or two corpse tokens in an adjacent space to target.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Warpflesh" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="8508-68dc-6960-b11e">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Starts combat with 4 mutation tokens.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Absorb" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="f2bf-024a-45c3-0829">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Melee.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Deal 1 devil damage to an adjacent unit. If reduce to 0 hp, obliterates unit and the homunculus gains any tokens the absorbed unit had.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="dacd-a12a-d91c-8fe5" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Ball of Limbs" hidden="false" id="36d1-97e1-2f03-a40c" sortIndex="1">
+              <profiles>
+                <profile name="Ball of Limbs" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="23f8-548c-09ca-28d0">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">When choosing to MOVE again, destroys walls and absorbs corpses it moves over, mutating each time.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ad4-5109-fd5c-0eea" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Form Carapace" hidden="false" id="4356-403d-0b84-8413">
+              <profiles>
+                <profile name="Form Carapace" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="f200-3a95-cbbf-494d">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">If absorb destroys a unit, gains physical armor for the rest of combat.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="beda-b7d1-3c33-a892" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Meld" hidden="false" id="e1f2-f782-6f67-ada7" sortIndex="2">
+              <profiles>
+                <profile name="Meld" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="e1db-74d9-fd92-df2b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">When absorbing allies, slays instead of obliterating them, and this unit mutates.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="411e-1f59-7dd9-18ac" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="789c-7d13-e581-4b7a" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Igorri" hidden="false" id="d09c-10f3-8baf-9c91" targetId="d1ab-0322-0ce3-aa74" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Tyrant" id="3c65-85ad-c3b7-1ef0" hidden="false" type="profile" targetId="d174-18f9-73dc-aeb7"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lycan" hidden="false" id="d7e7-7f87-d073-fc92">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="ee6d-d046-65f6-602d" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="72f0-12f8-9ee5-6694" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="5fa8-a199-7840-74c7" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Lycan" hidden="false" id="2859-d2c9-b11c-dbcd">
+          <profiles>
+            <profile name="Lycan" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="b8cc-f8b6-99fe-1459">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">4+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0adb-579e-c08f-e4b2" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Horror" hidden="false" id="6cc8-4da7-f440-3d33" targetId="ee6d-d046-65f6-602d" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Bloody Slashes" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="fee9-bce0-01cc-8177">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Melee, attack.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage. Effect: splash (self): 1 damage.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Bloodgorger" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="4383-fe04-4694-8fb8">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Mutate, then gain 1 strength. Spare Parts: Then gain (3+) 1 speed, (5+) and 1 vitality, (6+) then mutate again. Roll 1D per corpse consumed for the effect.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Vile Rupture" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="4d86-8500-267f-b3ed">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Vile Rupture: This unit has deathburst: Remove up to three plague tokens on this unit, then splash (self): 1 toxic damage, once, per plague token removed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="5993-c85a-7b09-4a23" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="The Hunger" hidden="false" id="88b5-8eeb-2768-01ec" sortIndex="1">
+              <profiles>
+                <profile name="The Hunger" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="845b-16b9-5f27-0375">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">If starting turn in range 2 of a corpse, may step 2.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b477-7697-66b7-0004" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hunch" hidden="false" id="f502-28ff-4b27-0fa0">
+              <profiles>
+                <profile name="Hunch" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="492e-981d-dab5-9f1d">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">May use corpses as cover spaces.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4048-b122-922f-ac8d" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Autophagia" hidden="false" id="0829-6292-3c24-bed2" sortIndex="2">
+              <profiles>
+                <profile name="Autophagia" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="a0d3-813f-c7bf-5ce5">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">At turn start, may deal 1 damage to self, ignoring armor, to generate a corpse in an adjacent space.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db5a-9327-409f-fe1f" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="b677-9fb7-2839-a41f" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Igorri" hidden="false" id="7fd7-8e52-100c-af8d" targetId="d1ab-0322-0ce3-aa74" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Stitch" hidden="false" id="4ee6-9535-48a3-8353">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="2" repeats="1" field="selections" scope="self" childId="d26e-9892-d83f-2828" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="72f0-12f8-9ee5-6694" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="5fa8-a199-7840-74c7" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Stitch" hidden="false" id="7f70-b78b-0d8a-804a">
+          <profiles>
+            <profile name="Stitch" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="a5de-4087-6bc4-abea">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">3</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">2</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">4+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eaa4-94dc-578a-b769" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Thrall" hidden="false" id="cd85-2862-cc1a-5d61" targetId="d26e-9892-d83f-2828" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Twisting Strike" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="4389-4912-eca0-88de">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, Melee.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage. Effect: Mutate.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Fall to Shambles" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="30c2-e40e-9f2c-ebcd">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">When slain, leaves an extra corpse token in an adjacent space (two corpses total)</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Unstable Mutation" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="581d-a33b-9a3d-0d73">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Gain 1 strength, (4+) 1 speed, (5+) and 1 vitality, (6+) and explode for splash (self): 1 damage. Spare parts: Roll +1D per corpse and pick the highest result.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Thrall" id="8b30-c99b-7ff9-3fb8" hidden="false" type="profile" targetId="6d91-8f5b-427e-0608"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="ea0e-69d3-3696-2b7a" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Genestealer" hidden="false" id="51ca-6e65-394c-3b6b" sortIndex="1">
+              <profiles>
+                <profile name="Genestealer" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="7528-3fd7-c564-671b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Twisting strike gains Effect (5+): steal a positive token from target.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0f0a-5a5d-f6de-4d17" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Aftermath" hidden="false" id="397a-9c38-1c50-d112">
+              <profiles>
+                <profile name="Warping Mutate" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="ed60-04a1-571d-901f">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">May step 1 (4+) or 3 spaces before Unstable mutation</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb4a-8af9-5e0e-cc4b" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Spread Mutate" hidden="false" id="fe39-89de-b097-02ab" sortIndex="2">
+              <profiles>
+                <profile name="Spread Mutate" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="e5f0-7490-4226-1c62">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Twisting strike also causes an adjacent ally to mutate.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f64-a5f4-7ffd-d23a" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8535-7f43-0abe-0d3a" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Igorri" hidden="false" id="990e-006d-2d3e-13e8" targetId="d1ab-0322-0ce3-aa74" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Strigoi" hidden="false" id="71a6-e061-67c9-19b5">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="77f9-1904-4c54-414d" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="72f0-12f8-9ee5-6694" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="5fa8-a199-7840-74c7" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Strigoi" hidden="false" id="9bbc-af62-5a10-ab6c">
+          <profiles>
+            <profile name="Strigoi" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="eaf8-3dbc-340d-39ed">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">3</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">4+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0239-b67a-d463-8e95" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Hunter" hidden="false" id="7971-41f0-6c16-dd1e" targetId="77f9-1904-4c54-414d" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Regurgitate" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="a4b2-dfe0-235c-1191">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, Range 2-4.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Splash (target): Create a corpse in the area for every unit in the area, up to three times, then mutate.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Sin Eater" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="cf01-c6ba-a430-912b">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 2-4, Attack.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage. Effect: Steal a positive token from target. Spare Parts: plus one more token per corpse consumed. If target has no positive tokens, gain 1 strength instead of stealing a token</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Flight" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="87e5-7b69-9849-dd70">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Ignores adverse terrain and elevation attack and movement penalties.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="e8e0-9e5a-b922-f98e" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Drown in Viscera" hidden="false" id="9e0d-7c8e-2fec-f6d7" sortIndex="1">
+              <profiles>
+                <profile name="Drown in Viscera" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="7159-7759-6450-3ea5">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Regurgitate has a 5+ effect chance to strip a token of your choice from each foe in the area.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8a97-6ada-3a3b-f602" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Cleansing Wash" hidden="false" id="f4c5-b1a9-6751-d8f8">
+              <profiles>
+                <profile name="Cleansing Wash" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="1ec8-3bac-528f-ae23">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Regurgitate has a 5+ effect chance to remove a negative token from an ally caught in the area.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f34-0c78-9437-f1a6" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Rapid Adaptation" hidden="false" id="1e2d-5471-a4b4-baf2" sortIndex="2">
+              <profiles>
+                <profile name="Rapid Adaptation" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="e957-52d3-224e-7815">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">May mutate once for each corpse created with Regurgitate instead.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a30-fafd-e816-c4c6" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="fdf4-989d-0f5f-f6ae" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Igorri" hidden="false" id="46fa-bb06-d516-fd58" targetId="d1ab-0322-0ce3-aa74" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+  </selectionEntries>
+</catalogue>

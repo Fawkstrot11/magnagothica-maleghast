@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="true" id="4961-26a4-18c6-94fd" name="Deadsouls Library" gameSystemId="sys-8df6-50db-7b5c-4327" gameSystemRevision="4" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Banshee" hidden="false" id="9709-2bd7-0f95-637c">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="77f9-1904-4c54-414d" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="4b73-f0f7-dc69-3d70" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c74c-76fb-539d-54ec" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Banshee" hidden="false" id="bfec-f4a3-7863-4492">
+          <profiles>
+            <profile name="Banshee" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="d017-6521-f1b0-ae83">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">3</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">3</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">5+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">MAG</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="59f5-ce4e-f6c8-784a" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Hunter" hidden="false" id="27af-9a5f-38c1-acf2" targetId="77f9-1904-4c54-414d" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Tombstone" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="5713-83aa-82c7-fb2c">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 4</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Create a wall in range and (5+) adjacent foes to the wall gain 1 weak.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Bale Scream" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="880c-b91c-b1e8-55c6">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Line 4.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Line: 1 curse damage. Isolated units take 1 curse damage again. May penetrate walls and does not damage walls. Effect: If this line passes through a wall, this unit gains 1 strength.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Soul Sight" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="2b6e-977a-5d60-a076">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Abilities ignore line of sight.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="3271-bd64-627d-4c20" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Swarm Feed" hidden="false" id="2ef6-54d7-5511-41ca" sortIndex="1">
+              <profiles>
+                <profile name="Swarm Feed" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="917d-4872-d249-1cf4">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">May spend plague tokens on self to grant Driving Vermin +1D per token spent.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="260c-5ee5-d929-181d" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Defiler" hidden="false" id="f4f8-34cc-5d1b-3217">
+              <profiles>
+                <profile name="Defiler" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="b6e7-d680-9580-eeef">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Driving Vermin gains effect (5+) create a hazard under target.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="344a-f23a-1b7b-7084" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Toxic Avenger" hidden="false" id="c752-f36e-7f02-0727" sortIndex="2">
+              <profiles>
+                <profile name="Toxic Avenger" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="c79e-f57f-be9c-c4a5">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Immune to hazards. While standing in a hazard, increase the range of all abilities by +2.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c301-486b-647d-217f" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="66ca-7e25-ec29-0a67" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Deadsouls" hidden="false" id="02cf-0911-9825-0216" targetId="4f3c-1e59-d5a3-f2ed" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Bound Devil" hidden="false" id="cb48-155f-24d3-0078">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="6989-702c-1324-ecad" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="4b73-f0f7-dc69-3d70" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c74c-76fb-539d-54ec" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Bound Devil" hidden="false" id="1d6a-1a1a-3039-21e2">
+          <profiles>
+            <profile name="Bound Devil" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="decf-d860-5172-185a">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">3</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">6</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">2+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">MAG</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3f91-72ee-473f-2dda" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Tyrant" hidden="false" id="b607-6f7e-fc98-1c59" targetId="6989-702c-1324-ecad" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Beckon Lamb" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="2bc9-de65-c44b-0559">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Curse, range 2-4, requires isolated unit</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Unit gains 2 weak and is pulled 3.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Labyrinth Master" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="2c4b-eea9-97dd-fb65">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Before MOVEing, may remove and place one adjacent wall in any other free adjacent space.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Horrendous End" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="dc9e-ff14-f7aa-84be">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Melee, Attack.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: Deals 1 damage, +1 for each of the following that is true about the target: Doomed, Isolated, Weak, In adverse terrain</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Hell’s Grasp" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="76f7-3e24-b225-b80b">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Curse, Range 4, requires isolated unit.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Choose an isolated unit. That unit gains 1 weak and may no longer MOVE or step until the end of its next turn or until it’s no longer isolated.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="ebed-a078-aebe-24b3" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="To the Slaughter" hidden="false" id="5647-2641-0920-0420" sortIndex="1">
+              <profiles>
+                <profile name="To the Slaughter" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="60a0-6416-9de0-3ee3">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Beckon Lamb has no maximum range against Doomed units</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c516-9e98-8b7e-d4bb" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Strong Pact" hidden="false" id="6d78-b8da-2f26-4d20" sortIndex="3">
+              <profiles>
+                <profile name="Strong Pact" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="f573-b170-d6d2-67f8">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">This unit is curseproof.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf7d-d656-1858-4323" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Supremacy" hidden="false" id="d745-2486-d490-0728" sortIndex="2">
+              <profiles>
+                <profile name="Supremacy" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="92d9-1c39-6ecf-1f4c">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Attacks against other Tyrants cannot have their damage reduced and obliterate their targets instead of slaying them.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a75-e512-9575-7a06" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="69b1-6386-e49b-536c" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Deadsouls" hidden="false" id="d5e2-e8de-788c-e570" targetId="4f3c-1e59-d5a3-f2ed" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Tyrant" id="2b9c-064b-439b-dcbd" hidden="false" type="profile" targetId="d174-18f9-73dc-aeb7"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Chosen" hidden="false" id="8e13-ad42-7de3-6d89">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="c411-bd0a-19ee-618a" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="4b73-f0f7-dc69-3d70" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c74c-76fb-539d-54ec" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Chosen" hidden="false" id="6e33-76d3-d130-cb30">
+          <profiles>
+            <profile name="Chosen" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="da04-d9d4-e23f-d5bc">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">3</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">5+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">MAG</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fb3b-cb03-a1eb-01f0" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Scion" hidden="false" id="1846-b96c-5af5-fadb" targetId="c411-bd0a-19ee-618a" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Kidnap" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="7b3f-cf78-d552-e078">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Curse, Range 2-4.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Curset: Pull 1, ignoring line of sight. If pulling a unit into a wall, pull 3 instead and the kidnapped unit can pass through walls and units during this pull.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Serpent&apos;s Kiss" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="3337-c175-a7c8-d8ff">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, Melee.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage. Effect: Inflicts 1 curse damage and 1 weak against isolated units (4+) and Dooms them.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Plaguebearers" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="a8f9-5386-accf-1e1f">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Slither: Has free movement while adjacent to a wall.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Tombraiser" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="c4bb-1fef-cac0-a3f1">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Melee.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Create a wall (3+) then create adverse terrain (5+) then create adverse terrain again.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="cd12-ea2f-e86b-6b2a" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Ivory Serpent" hidden="false" id="3412-d2f1-3432-dbfe" sortIndex="1">
+              <profiles>
+                <profile name="Ivory Serpent" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="d4e7-4a90-fdfc-2293">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Serpent’s Kiss also triggers its effects against units standing in adverse terrain.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e489-0602-c5ce-846d" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Foul Monuments" hidden="false" id="ab1d-6c4d-2d4a-ad19">
+              <profiles>
+                <profile name="Foul Monuments" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="2164-9046-2c1d-caf3">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Tombraiser gains range 3.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="27f8-8f76-acfa-9556" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Leap" hidden="false" id="5b85-7cee-f829-9183" sortIndex="2">
+              <profiles>
+                <profile name="Leap" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="71d9-01be-c680-4f56">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">May step 1 before ACTing, or step 2 and clear a token if adjacent to a wall.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="096f-dac4-fdfa-535b" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="e242-c4c8-fe19-71b6" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Deadsouls" hidden="false" id="d83b-a94f-ebeb-d4a7" targetId="4f3c-1e59-d5a3-f2ed" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sacrifice" hidden="false" id="0263-0ef4-526c-d566">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="2" repeats="1" field="selections" scope="self" childId="d26e-9892-d83f-2828" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="4b73-f0f7-dc69-3d70" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c74c-76fb-539d-54ec" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Sacrifice" hidden="false" id="3491-de1b-41b4-4866">
+          <profiles>
+            <profile name="Sacrifice" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="bb23-ff53-8d85-9acc">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">2</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">4+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="02af-1daf-d31a-64a1" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Thrall" hidden="false" id="91d3-c951-844e-2e4c" targetId="d26e-9892-d83f-2828" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Shudder" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="9405-21f9-5f30-d963">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, melee</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage and (4+) Dooms unit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Inverted Crucifix" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="b250-aa7d-e034-5b7e">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">When slain, leaves a space of adverse terrain or (4+) a wall instead of a corpse</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Beckon" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="e51e-af0c-b683-aaf7">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 2-3.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Pull 1. Ignores line of sight.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Thrall" id="f6d3-cd95-8fb9-0833" hidden="false" type="profile" targetId="6d91-8f5b-427e-0608"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="58ef-b1d7-493a-2a2d" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Squirm" hidden="false" id="bca0-aeff-5639-8fab" sortIndex="1">
+              <profiles>
+                <profile name="Squirm" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="0b12-05b2-eb06-fd2d">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">May move through walls.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c052-82b1-8d40-ad78" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Impending Death" hidden="false" id="a051-c35b-07d5-841f">
+              <profiles>
+                <profile name="Impending Death" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="c5a5-823b-9f0a-0c32">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Beckon inflicts 1 weak on isolated units.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="16e2-4513-da2a-567a" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Dead Grasp" hidden="false" id="a3a2-6420-1e64-aa40" sortIndex="2">
+              <profiles>
+                <profile name="Dead Grasp" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="5ac6-87f4-baaa-06e0">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Beckon has no maximum range against isolated units</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="91bf-4b83-1182-d14a" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a7a7-74d7-5ff6-0982" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Deadsouls" hidden="false" id="9be0-89eb-7d5e-d9b0" targetId="4f3c-1e59-d5a3-f2ed" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Vizigheist" hidden="false" id="039c-d296-f4b5-9749">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="ee6d-d046-65f6-602d" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="4b73-f0f7-dc69-3d70" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="c74c-76fb-539d-54ec" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Vizigheist" hidden="false" id="af11-2b93-1dc6-4207">
+          <profiles>
+            <profile name="Vizigheist" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="39f0-3a25-e58c-5094">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">3</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">5+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">MAG</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e6aa-e6b9-f5ca-5f5b" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Horror" hidden="false" id="3690-5757-79a4-d9d6" targetId="ee6d-d046-65f6-602d" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Urgal Blade" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="ef3b-a260-e57d-0e61">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, Melee.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 2 curse damage. Effect: Against isolated units, gain 1 strength and may then MOVE again.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Horrendous Shriek" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="5353-02f0-ccd0-5827">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Curse, Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Curse: Splash (self): foes gain 1 weak. (5+): and are Doomed. Doomed units take 1 curse damage.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Teleport" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="1b32-1856-cac4-a9e2">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">When MOVEing a second time or more in a turn, may instead remove self from the battlefield, then place anywhere in free space in range 4.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="8c14-b876-adff-d253" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Terrorize" hidden="false" id="ce08-349b-a1d7-215d" sortIndex="1">
+              <profiles>
+                <profile name="Terrorize" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="5842-5d17-1d7e-8b9b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Gain 2 strength if Horrendous Shriek hits an isolated foe</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c5c6-412a-eb83-93e9" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Condemn" hidden="false" id="4d30-2bb5-9ffd-c27e">
+              <profiles>
+                <profile name="Condemn" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="957a-6a99-6f95-ebcd">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Shriek obliterates Doomed units at 1 hp or lower.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d33e-6d66-9be9-dc2b" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Soul Frost" hidden="false" id="c526-9608-80ca-8dec" sortIndex="2">
+              <profiles>
+                <profile name="Soul Frost" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="b9b6-f542-ac0d-b0fc">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">When teleporting, create a space of adverse terrain in the first space vacated.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1e94-2464-e583-33c4" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0863-9424-948f-4495" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Deadsouls" hidden="false" id="6f77-d21f-67f8-dd8a" targetId="4f3c-1e59-d5a3-f2ed" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+  </selectionEntries>
+</catalogue>

@@ -138,8 +138,15 @@
             <selectionEntry type="upgrade" import="true" name="Igorri" hidden="false" id="5fa8-a199-7840-74c7"/>
             <selectionEntry type="upgrade" import="true" name="Goregrinders" hidden="false" id="9e3c-d224-b045-4972"/>
           </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dd57-7e5d-bcba-fe31-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dd57-7e5d-bcba-fe31-max" includeChildSelections="false"/>
+          </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b52e-a956-13e4-698f" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
   </selectionEntries>
 </gameSystem>

@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="true" id="d38d-58c5-5cf9-e3ed" name="Gargamox Library" gameSystemId="sys-8df6-50db-7b5c-4327" gameSystemRevision="4" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Host" hidden="false" id="5849-0f9e-7762-5141">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="77f9-1904-4c54-414d" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="9c26-29be-2b1a-761f" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="65b3-f32c-07d7-3ebd" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Host" hidden="false" id="a351-285d-9ae4-22d6">
+          <profiles>
+            <profile name="Host" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="1e2a-0bc6-a5a3-2792">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">3</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">3+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f2d-48dd-3fd6-db13" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Hunter" hidden="false" id="5a4d-b1d1-0110-0098" targetId="77f9-1904-4c54-414d" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Driving Vermin" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="39d9-2859-bbc9-ea23">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack,  Range 2-4</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage and pull 1, and +1 damage if target is standing in a hazard. Infect: 1 damage and pull 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Propagate Swarm" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="6354-b39f-315a-5a5b">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 4</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Create one, (3+) two, or (5+) three hazards in range. Inflict a plague token to a unit adjacent to each hazard when created.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Swarm Release" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="87d9-424b-0559-bfc9">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Has deathburst: create a hazard under a number of units in range 2 equal to the number of plague tokens on this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="9d12-8734-3c21-0033" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Swarm Feed" hidden="false" id="0521-fd65-cf33-ab32" sortIndex="1">
+              <profiles>
+                <profile name="Swarm Feed" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="ff2b-e104-9c88-bc8e">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">May spend plague tokens on self to grant Driving Vermin +1D per token spent.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="013e-b89b-655d-4b32" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Defiler" hidden="false" id="13ca-434f-e439-4515">
+              <profiles>
+                <profile name="Defiler" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="35de-c201-dda2-f56b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Driving Vermin gains effect (5+) create a hazard under target.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="caee-aa09-feef-4ff6" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Toxic Avenger" hidden="false" id="5d1f-c383-6f11-3722" sortIndex="2">
+              <profiles>
+                <profile name="Toxic Avenger" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="ecdf-9962-428e-3eae">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Immune to hazards. While standing in a hazard, increase the range of all abilities by +2.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="849d-a954-de43-829e" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7e11-9113-75e9-eeb5" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Gargamox" hidden="false" id="ff59-ab5a-b347-dd53" targetId="be1c-cc99-0e7e-e1bc" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Leech" hidden="false" id="32ab-5798-1417-0c32">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="caa5-c1c0-4099-044a" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="65b3-f32c-07d7-3ebd" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="9c26-29be-2b1a-761f" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Leech" hidden="false" id="05d2-a4e2-3890-9872">
+          <profiles>
+            <profile name="Leech" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="b300-5c5e-144b-217e">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">4+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">MAG</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1840-cda8-1b8f-f2eb" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Freak" hidden="false" id="cd38-969b-8c67-939d" targetId="caa5-c1c0-4099-044a" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Evolve Strain" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="c12e-dd0a-2368-19af">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Curse, Range 3.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Strip all plague tokens from a unit in range. Foes take 1 toxic damage. Then, they gain 1 slow per token removed. Allies gain 1 strength per token removed.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Deathwash" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="1b74-082f-9624-af4a">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Has Deathburst: Splash (self) Remove any 1 token from all units in the area.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Suppurate" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="38cc-70b2-c96b-b917">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Curse, Range 3.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Unit permanently gains death burst: splash (self): 1 toxic damage and 1 plague. This effect cannot stack with itself but stacks with other death burst effects</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Swell with Corruption" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="1798-7839-99b6-4dd1">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 3.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Unit triggers deathburst without being slain.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="fd40-e89d-fcfd-ae50" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Massive Swell" hidden="false" id="c434-aa9c-67e9-12c2" sortIndex="1">
+              <profiles>
+                <profile name="Massive Swell" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="875c-8d6b-91a9-3fc3">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Swell with corruption has a 4+ effect chance to trigger twice.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e02b-bb24-27ae-5f26" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Acid Blood" hidden="false" id="7359-3595-47c6-ea26" sortIndex="3">
+              <profiles>
+                <profile name="Acid Blood" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="7b52-16fd-50ff-63db">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Suppurate also grants deathburst: Create a hazard instead of a corpse</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b556-743f-3700-a3f3" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Pandemic" hidden="false" id="f1cd-48a0-4110-20b6" sortIndex="2">
+              <profiles>
+                <profile name="Pandemic" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="8707-ba35-ba10-eb43">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Removes 1 plague from all adjacent characters instead, with the same effects.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a6ae-911a-e8a5-4b3a" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="253c-91e6-09e1-50d2" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Gargamox" hidden="false" id="6aa9-09e7-e487-0d06" targetId="be1c-cc99-0e7e-e1bc" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rotten" hidden="false" id="86a7-1263-6301-d392">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="c411-bd0a-19ee-618a" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="9c26-29be-2b1a-761f" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="65b3-f32c-07d7-3ebd" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Rotten" hidden="false" id="8ae4-4a68-fc81-8d10">
+          <profiles>
+            <profile name="Rotten" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="df75-2b11-7ff9-5c16">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">3+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">PHYS</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc79-d1cb-3c66-c810" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Scion" hidden="false" id="ffe2-b3a9-abf9-0393" targetId="c411-bd0a-19ee-618a" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Pustulate" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="f66d-14b2-1163-0fe1">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 3.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Create a hazard in free space in range 3 and inflict plague on an adjacent target (4+) all adjacent targets.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Vomitous Mass" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="1c6e-ef30-45bd-7fa7">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Line 4.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Line: 1 plague. Already plagued foes gain 1 slow.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Plaguebearers" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="f112-c858-ec56-5e61">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Immune to hazards. May treat plague tokens as strength</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Rotblade" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="b95b-4b75-212f-1597">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, Melee.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 toxic damage and infect: 1 toxic damage</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="879b-162e-bb77-6c32" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Catalyze" hidden="false" id="1ee3-27c3-82f4-0e22" sortIndex="1">
+              <profiles>
+                <profile name="Catalyze" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="ea36-2913-85bc-c71f">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Vomitous mass deals 1 toxic damage to units standing in hazards.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2c92-7017-023c-2dc7" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Smog Shroud" hidden="false" id="b9c4-3000-5ccc-9955">
+              <profiles>
+                <profile name="Smog Shroud" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="33cd-d0aa-d4fb-f0e9">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Curseproof and cover from all directions while standing in a hazard.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25a1-b418-8de0-b81a" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Invigorating Viscera" hidden="false" id="5ee0-8f45-92f7-3689" sortIndex="2">
+              <profiles>
+                <profile name="Invigorating Viscera" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="bda0-7a12-c028-8612">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Gain death burst: splash (self): 1 plague, and allies gain 1 strength.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="914f-6245-1618-db16" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="6b40-f3bd-0bdd-127b" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Gargamox" hidden="false" id="a12f-555f-79c7-a501" targetId="be1c-cc99-0e7e-e1bc" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Scum" hidden="false" id="b53b-3f72-2f6e-1796">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="2" repeats="1" field="selections" scope="self" childId="d26e-9892-d83f-2828" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="9c26-29be-2b1a-761f" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="65b3-f32c-07d7-3ebd" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Scum" hidden="false" id="502e-128e-cd3e-90a8">
+          <profiles>
+            <profile name="Scum" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="980c-458e-42f1-446a">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">3</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">1</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">3+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">SUPER</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b90e-3d99-5c47-43ca" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Thrall" hidden="false" id="583b-ca11-096d-9a11" targetId="d26e-9892-d83f-2828" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Shamble" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="4405-9dba-8dd4-8083">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, melee</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage and 1 plague</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Toxic Revenge" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="e85b-2a3b-e926-1461">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Has Deathburst: Splash (self): 1 plague, and 1 toxic damage to already plagued foes.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Pseudopod" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="51ce-5025-88d2-7136">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 2-3.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Pull unit one space. This gains +1 range and pull for each plague token on this unit.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Thrall" id="2856-23f1-9cc8-e58f" hidden="false" type="profile" targetId="6d91-8f5b-427e-0608"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="ea5d-f661-e14b-3512" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Bloat" hidden="false" id="4b3d-2a80-9607-f905" sortIndex="1">
+              <profiles>
+                <profile name="Bloat" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="8cda-3375-738f-4c49">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Toxic Revenge’s splash effect pushes 1 if this unit is plagued.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="44a2-5a85-57a7-7056" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Aftermath" hidden="false" id="e2f2-02d5-46eb-f224">
+              <profiles>
+                <profile name="Aftermath" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="a709-7474-ed0b-adf2">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Toxic Revenge leaves a hazard instead of a corpse</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e7f1-e2f7-f21c-2b70" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Tentacle Whip" hidden="false" id="972b-4cc3-6719-d4f4" sortIndex="2">
+              <profiles>
+                <profile name="Tentacle Whip" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="4c54-65f2-b2a3-6e57">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Pseudopod inflicts 1 slow on plagued units.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc91-c098-f26a-3dc8" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="98f3-6cf6-c520-4cde" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Gargamox" hidden="false" id="b339-1a7e-1f03-f3c0" targetId="be1c-cc99-0e7e-e1bc" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Slime" hidden="false" id="a772-8971-f7bd-add4">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="ee6d-d046-65f6-602d" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="9c26-29be-2b1a-761f" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="65b3-f32c-07d7-3ebd" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Slime" hidden="false" id="2eaa-0c1c-66a6-b358">
+          <profiles>
+            <profile name="Slime" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="a1e9-f269-6476-8d3b">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">4+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4446-7ca4-7c8f-db94" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Horror" hidden="false" id="f8ff-424d-81fe-26b3" targetId="ee6d-d046-65f6-602d" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Surge" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="1ac3-e8ba-34f6-6c1e">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: MOVE with free movement in a straight line. During this move, is immune to hazards and may move through walls and units. Any foe this unit passes through takes 1 toxic damage and this unit may pass off any plague tokens on this unit to affected units.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Percolate" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="0a8c-47a2-c4dc-ad47">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Melee, Attack</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Inflict two, (5+) or three plague on self, then may inflict 1 slow on an adjacent unit per plague token gained.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Vile Rupture" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="ef15-3666-1677-a0b0">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Vile Rupture: This unit has deathburst: Remove up to three plague tokens on this unit, then splash (self): 1 toxic damage, once, per plague token removed</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="9102-29ee-030c-2358" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Rotten Surge" hidden="false" id="6a19-394d-7b82-cea6" sortIndex="1">
+              <profiles>
+                <profile name="Rotten Surge" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="e7c3-649e-a68b-e745">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">After Surge, inflict 1 plague on self for each unit passed through.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8640-4997-eace-146c" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Gunk" hidden="false" id="2316-8fd1-4301-ff41">
+              <profiles>
+                <profile name="The Gunk" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="6604-4eb8-b2d9-9059">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Surge inflicts 2 slow on the first unit affected.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ad3-c37c-2d60-a089" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sticky Trail" hidden="false" id="b063-4249-9d13-7131" sortIndex="2">
+              <profiles>
+                <profile name="Sticky Trail" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="5862-2f92-ee12-5dc1">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Spin out grants 1 berserk.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c41-351c-a04c-7100" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ba8e-94d2-f447-d2ff" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Gargamox" hidden="false" id="8162-d577-a19a-dd78" targetId="be1c-cc99-0e7e-e1bc" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+  </selectionEntries>
+</catalogue>

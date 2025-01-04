@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="true" id="a2f5-652e-9f70-7460" name="Abhorrers Library" gameSystemId="sys-8df6-50db-7b5c-4327" gameSystemRevision="4" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Antipriest" hidden="false" id="5647-a2bf-9483-4128">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="caa5-c1c0-4099-044a" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="e9fd-1024-b7e8-1ff4" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="7097-b2b6-d024-0d39" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Antipriest" hidden="false" id="ae3b-bdf1-8832-4ee5">
+          <profiles>
+            <profile name="Antipriest" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="5632-c01a-d6c6-64e4">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">3</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">3+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">MAG</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="39f0-0ea9-55e9-d518" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Freak" hidden="false" id="8b16-30fa-270c-9911" targetId="caa5-c1c0-4099-044a" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Blessed Censer" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="54c4-6888-165d-1963">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, melee</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Splash (self): Stance (Even): Allies gain 1 vitality. (Odd): foes take 1 holy damage.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Gentleness" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="97d0-1553-6a23-28b9">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Become unable to MOVE, step, or be pushed or pulled until start of this unit’s next turn. At the start of that turn, allied units adjacent to this unit gain 1 vitality.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Delay Judgement" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="f6ec-1940-4335-2290">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 3.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: An allied unit in range gains miracle. If it already had miracle, miracle triggers on a 2+ until the end of their next turn. At the end of that unit’s turn, they lose miracle.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Miracle" id="d592-7e95-ea2f-f7ba" hidden="false" type="profile" targetId="e20f-88dd-f1fb-da80"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="519e-f143-ebc7-379b" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Cleansing Prayer" hidden="false" id="7b14-c041-5fe1-de34" sortIndex="1">
+              <profiles>
+                <profile name="Cleansing Prayer" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="e5e8-db75-74de-30a7">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Self and adjacent units are curseproof during gentleness.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e386-11b2-9752-03f4" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Boiling Censer" hidden="false" id="ffa7-197b-45a1-063b">
+              <profiles>
+                <profile name="Boiling Censer" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="d498-994e-1ad9-28ab">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Stance (Round 4+): Blessed Censer’s effects trigger twice</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3409-7870-52e3-fd9b" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Consecrate" hidden="false" id="6783-edd6-f24f-47a8" sortIndex="2">
+              <profiles>
+                <profile name="Consecrate" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="274d-47f6-d00f-269b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Blessed Censer may remove corpses in range.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1668-70d1-0f9c-0364" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="5e7a-36b8-ee75-7032" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Abhorrers" hidden="false" id="b403-49cf-2af4-68c8" targetId="dd9c-8870-f753-7d1f" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Holy Body" hidden="false" id="0f71-ec9a-85c4-718d">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="6989-702c-1324-ecad" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="e9fd-1024-b7e8-1ff4" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="7097-b2b6-d024-0d39" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Holy Body" hidden="false" id="7a89-41ca-4318-de16">
+          <profiles>
+            <profile name="Holy Body" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="5086-a385-325d-87e3">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">3</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">3</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">2+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">SUPER</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e08f-6c71-af05-f99a" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Tyrant" hidden="false" id="7e53-b4e7-0c3a-52ff" targetId="6989-702c-1324-ecad" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Ablutions" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="5b3f-d825-d979-74ab">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Gain two vitality. Until the start of this unit’s next turn, adjacent allies may spend vitality tokens on this unit as if they were their own.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Miraculous Flesh" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="2bb9-b495-9a48-7bee">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Lacks miracle, but starts combat with 4 vitality tokens.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Indignation" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="916e-b31f-76d1-e417">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Melee, Attack.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Remove one or two vitality tokens on this unit, then deal 1 holy damage to that many units in range, and push those units 1.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Bolides" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="0050-53eb-f370-0709">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 2-6.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Create one, (3+) two, (5+) or three hazards in range, ignoring line of sight.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Flight" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="fb5e-b113-1a74-bebb">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Ignores adverse terrain and elevation attack and movement penalties.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="bb4f-8120-bf75-d154" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Scathe" hidden="false" id="b367-f85b-9d3d-b82f" sortIndex="1">
+              <profiles>
+                <profile name="Scathe" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="3bf5-f354-0455-fb8b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Hazards from Bolides can be created under units.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d326-543c-eb12-05a2" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Witness" hidden="false" id="8123-7f6a-210a-8874" sortIndex="3">
+              <profiles>
+                <profile name="Witness" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="49e4-882f-1985-dd02">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Indignation gains stance (round 4+): deal 2 holy damage instead.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4082-f7f3-9768-c448" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Holy Font" hidden="false" id="f428-50c7-6917-d3c6" sortIndex="2">
+              <profiles>
+                <profile name="Holy Font" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="f9ba-f451-6039-0a20">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Ablutions gains stance (round 3+): gain 3 vitality instead, (round 5+): gain 4 vitality instead.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="33ac-ccc8-8c38-1105" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a4bf-c3eb-cc06-c7bc" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Abhorrers" hidden="false" id="c749-3be8-f93d-f71b" targetId="dd9c-8870-f753-7d1f" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Tyrant" id="b782-b785-7f86-eb81" hidden="false" type="profile" targetId="d174-18f9-73dc-aeb7"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Inquisitor" hidden="false" id="47e3-645b-256d-1a92">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="77f9-1904-4c54-414d" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="e9fd-1024-b7e8-1ff4" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="7097-b2b6-d024-0d39" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Inquisitor" hidden="false" id="1d9d-499a-e11f-0366">
+          <profiles>
+            <profile name="Inquisitor" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="f931-41b0-d313-d08d">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">3</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">3+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">MAG</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3070-dd56-a615-a3a8" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Hunter" hidden="false" id="9391-64da-a090-353f" targetId="77f9-1904-4c54-414d" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Requiesce en Pace" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="361f-5931-88b7-2724">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, Range 2-3</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 2 damage. Stance (Round 3+): ignoring armor. (Round 5+): 4 damage, ignoring armor.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Winch" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="64c6-f701-669d-0bb4">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Step 1. Next attack from this unit gains +1D and +2 maximum range. This effect stacks.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="4127-118a-be0b-360a" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Focus" hidden="false" id="d357-b9b2-c7d6-977d" sortIndex="1">
+              <profiles>
+                <profile name="Focus" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="a750-2e62-c299-afdb">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">If this unit does not move during its turn, it may remove a negative token from itself.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f33f-238e-0eaa-90b3" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Explosive Bolts" hidden="false" id="c6ec-f7d9-1bea-6d9b">
+              <profiles>
+                <profile name="Explosive Bolts" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="6cd4-5435-63b5-5228">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Stance: Requiesce en Pace pushes units one, (Round 3+) two, or (Round 5+) four spaces.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db99-fd01-983b-13dc" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heart Destroyer" hidden="false" id="b2bf-4eb0-f76d-44a7" sortIndex="2">
+              <profiles>
+                <profile name="Heart Destroyer" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="1818-3ff7-0da9-16fe">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Stance: Requiesce en Pace obliterates units it slays at round 3+.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="624b-411f-8801-6ea2" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3d8e-8859-462a-2fe1" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Abhorrers" hidden="false" id="ec0b-a8e7-16d3-cb5f" targetId="dd9c-8870-f753-7d1f" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Miracle" id="69f4-f430-5d50-1df8" hidden="false" type="profile" targetId="e20f-88dd-f1fb-da80"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Penitent" hidden="false" id="cc0c-518d-7154-fb50">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="c411-bd0a-19ee-618a" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="e9fd-1024-b7e8-1ff4" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="7097-b2b6-d024-0d39" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Penitent" hidden="false" id="a93a-9d4e-c497-b35a">
+          <profiles>
+            <profile name="Penitent" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="a041-a592-8052-c636">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">3</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">2+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">SUPER</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2bf9-b82e-9cbc-f59f" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Scion" hidden="false" id="b7d1-9729-cecb-6209" targetId="c411-bd0a-19ee-618a" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Mea Culpa" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="e93a-7165-f27f-ee6a">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Splash (self): Remove one negative token from all allies in range and place them on this unit. Then remove one, (4+) two, or (6+) all negative tokens from this unit, and gain 1 strength for each negative token removed this way.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Holy Water" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="4c72-3b44-96ba-4eac">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 2-3</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: 1 holy damage and (4+) create a hazard under target.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Excoriate" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="b23b-c8ce-64d1-f515">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, Melee.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage, and Stance (Odd): Splash (self): 1 holy damage. (Even): gain 1 vitality.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="0d8b-0874-dccf-377e" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Holy Blood" hidden="false" id="bf4e-c6a0-9af3-356b" sortIndex="1">
+              <profiles>
+                <profile name="Holy Blood" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="f956-da91-568c-cd3a">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Mea Culpa creates one or (4+) two hazards in free adjacent spaces.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0abf-340e-e15b-c8a7" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Taste the Lash" hidden="false" id="fa69-7e79-10d9-8928">
+              <profiles>
+                <profile name="Taste the Lash" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="4c9d-2ae2-0ca9-5b26">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Stance (round 4+): Excoriate triggers both effects</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ead-1454-c0ec-2aeb" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Eager" hidden="false" id="846f-0f19-41e6-d445" sortIndex="2">
+              <profiles>
+                <profile name="Eager" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="6e3c-f3f1-df08-0cc4">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">May step 2 before using Mea Culpa.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c2a3-13f1-5411-59bc" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="276e-3003-a2bc-8e6b" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Abhorrers" hidden="false" id="91f8-91e2-281c-697e" targetId="dd9c-8870-f753-7d1f" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Miracle" id="6673-2e68-14a5-39ba" hidden="false" type="profile" targetId="e20f-88dd-f1fb-da80"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Zealot" hidden="false" id="5bb9-3186-cceb-3af1">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="ee6d-d046-65f6-602d" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="e9fd-1024-b7e8-1ff4" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="7097-b2b6-d024-0d39" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Zealot" hidden="false" id="091d-5eb4-99b3-ddcf">
+          <profiles>
+            <profile name="Zealot" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="a421-4da0-d8f9-a53b">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">4+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b0a7-48af-afbf-f175" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Horror" hidden="false" id="2b46-4c67-df7e-6ad8" targetId="ee6d-d046-65f6-602d" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Whirling Chain" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="116a-dd92-1968-46a1">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, Range 2.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 2 damage. Stance (Odd): and MOVE again, Stance (Even): and push unit 2</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Smite" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="1824-5153-e21a-51a7">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Stance: The next use of Whirling Chain deals +damage equal to half the round number, rounded up and this unit may also step that many spaces before using it.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Zealotry" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="d930-d9a1-0391-75a4">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">When MOVEing again, gain 1 vitality.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="9d57-9591-7f44-e76c" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Punisher" hidden="false" id="cebb-4653-549f-f363" sortIndex="1">
+              <profiles>
+                <profile name="Punisher" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="e540-eef3-bffa-d0cd">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Stance: Whirling chain Obliterates foes it slays at round 3+.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0f43-ecc1-ba00-add4" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fiery Chain" hidden="false" id="90d8-953a-829c-cf9d">
+              <profiles>
+                <profile name="Fiery Chain" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="2165-6379-4b4d-9a37">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Whirling chain creates a hazard adjacent to its target after it resolves.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7a95-59ec-445d-4127" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Suffuse" hidden="false" id="0dc4-aef9-92b7-d374" sortIndex="2">
+              <profiles>
+                <profile name="Suffuse" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="d3cd-6c51-bcb0-be59">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Whirling Chain gains effect (5+): gain 1 vitality and remove a negative token from this unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8aa9-c73c-f3b7-c678" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="40f4-ecec-5473-cc1a" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Abhorrers" hidden="false" id="24bf-b660-1151-8145" targetId="dd9c-8870-f753-7d1f" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Miracle" id="a424-c7b8-6863-efa2" hidden="false" type="profile" targetId="e20f-88dd-f1fb-da80"/>
+      </infoLinks>
+    </selectionEntry>
+  </selectionEntries>
+  <sharedProfiles>
+    <profile name="Miracle" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="e20f-88dd-f1fb-da80">
+      <characteristics>
+        <characteristic name="Description" typeId="944b-4672-5052-d884">A unit affected by a Miracle has a 5+ effect chance to instantly return to life at 1 hp at the end of any turn it is slain, clearing all tokens.</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
+</catalogue>

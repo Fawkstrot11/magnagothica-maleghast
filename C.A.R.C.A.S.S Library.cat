@@ -12,7 +12,8 @@
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="roster" childId="3db9-af2c-a9c6-7c90" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="3db9-af2c-a9c6-7c90" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="86c8-ff5a-e731-02b9" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -141,6 +142,16 @@
             <repeat value="1" repeats="1" field="selections" scope="self" childId="77f9-1904-4c54-414d" shared="true" roundUp="true" percentValue="false"/>
           </repeats>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="3db9-af2c-a9c6-7c90" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="86c8-ff5a-e731-02b9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Barrelform" hidden="false" id="836d-0de0-9be8-e0f0">
@@ -264,6 +275,16 @@
           <repeats>
             <repeat value="1" repeats="1" field="selections" scope="self" childId="6989-702c-1324-ecad" shared="true" roundUp="true" percentValue="false"/>
           </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="3db9-af2c-a9c6-7c90" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="86c8-ff5a-e731-02b9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntries>
@@ -390,6 +411,16 @@
             <repeat value="1" repeats="1" field="selections" scope="self" childId="c411-bd0a-19ee-618a" shared="true" roundUp="true" percentValue="false"/>
           </repeats>
         </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="3db9-af2c-a9c6-7c90" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="86c8-ff5a-e731-02b9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Enforcer" hidden="false" id="db1e-1a6c-f93d-a601">
@@ -513,6 +544,16 @@
           <repeats>
             <repeat value="2" repeats="1" field="selections" scope="self" childId="d26e-9892-d83f-2828" shared="true" roundUp="true" percentValue="false"/>
           </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="primary-catalogue" childId="3db9-af2c-a9c6-7c90" shared="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="86c8-ff5a-e731-02b9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <selectionEntries>
