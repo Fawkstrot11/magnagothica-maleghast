@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-8df6-50db-7b5c-4327" name="Magnagothica Maleghast" battleScribeVersion="2.03" revision="3" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-8df6-50db-7b5c-4327" name="Magnagothica Maleghast" battleScribeVersion="2.03" revision="4" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="C.A.R.C.A.S.S" id="default-category"/>
     <categoryEntry name="Abhorrers" id="dd9c-8870-f753-7d1f"/>
@@ -14,6 +14,7 @@
     <categoryEntry name="Horror" id="ee6d-d046-65f6-602d" hidden="false"/>
     <categoryEntry name="Necromancer" id="3cc8-db02-fde9-08e2" hidden="false"/>
     <categoryEntry name="Hunter" id="77f9-1904-4c54-414d" hidden="false"/>
+    <categoryEntry name="Configuration" id="65b3-0cdf-7683-c6da" hidden="false"/>
   </categoryEntries>
   <profileTypes>
     <profileType name="Unit" id="41cc-7054-d4e7-251b" hidden="false">
@@ -122,4 +123,23 @@
       </characteristics>
     </profile>
   </sharedProfiles>
+  <selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Heresy" hidden="false" id="681c-2c7d-45ad-b547">
+      <categoryLinks>
+        <categoryLink targetId="65b3-0cdf-7683-c6da" id="18f5-4f8b-1f73-798b" primary="true" name="Configuration"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Heresy Choice" id="b133-39f5-e1c0-fc2b" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Gargamox" hidden="false" id="9c26-29be-2b1a-761f"/>
+            <selectionEntry type="upgrade" import="true" name="C.A.R.C.A.S.S" hidden="false" id="86c8-ff5a-e731-02b9"/>
+            <selectionEntry type="upgrade" import="true" name="Deadsouls" hidden="false" id="c74c-76fb-539d-54ec"/>
+            <selectionEntry type="upgrade" import="true" name="Abhorrers" hidden="false" id="7097-b2b6-d024-0d39"/>
+            <selectionEntry type="upgrade" import="true" name="Igorri" hidden="false" id="5fa8-a199-7840-74c7"/>
+            <selectionEntry type="upgrade" import="true" name="Goregrinders" hidden="false" id="9e3c-d224-b045-4972"/>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+  </selectionEntries>
 </gameSystem>
