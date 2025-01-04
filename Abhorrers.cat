@@ -4,7 +4,7 @@
     <forceEntry name="Black Mass" id="c42b-0d51-9aa7-9275" hidden="false">
       <categoryLinks>
         <categoryLink name="Necromancer" hidden="false" id="d5de-a94c-7d83-9b57" targetId="3cc8-db02-fde9-08e2"/>
-        <categoryLink name="Gargamox" hidden="false" id="de0a-4db1-7821-2ddd" targetId="be1c-cc99-0e7e-e1bc"/>
+        <categoryLink name="Abhorrers" hidden="false" id="de0a-4db1-7821-2ddd" targetId="dd9c-8870-f753-7d1f" type="category"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="Max 3 Scions" field="error">
