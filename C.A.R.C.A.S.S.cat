@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="3db9-af2c-a9c6-7c90" name="C.A.R.C.A.S.S" gameSystemId="sys-8df6-50db-7b5c-4327" gameSystemRevision="2" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="3db9-af2c-a9c6-7c90" name="C.A.R.C.A.S.S" gameSystemId="sys-8df6-50db-7b5c-4327" gameSystemRevision="2" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Operator" hidden="false" id="1671-ba47-93da-95e0">
       <categoryLinks>
@@ -959,14 +959,11 @@
       <description>Once used, a unit cannot use any ability with this tag until it reloads. To reload, sacrifice a MOVE. Other abilities may allow a reload for free.</description>
     </rule>
   </rules>
-  <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="Necromancer Upgrades" id="4b5c-13fe-168c-d543" hidden="false"/>
-  </sharedSelectionEntryGroups>
   <forceEntries>
     <forceEntry name="Black Mass" id="24dd-2d5b-975b-4b43" hidden="false">
       <categoryLinks>
-        <categoryLink name="Necromancer" hidden="false" id="916b-3bf8-cf01-d647" targetId="3cc8-db02-fde9-08e2" type="category"/>
-        <categoryLink name="C.A.R.C.A.S.S" hidden="false" id="aa6e-195e-a402-023c" targetId="default-category" type="category"/>
+        <categoryLink name="Necromancer" hidden="false" id="916b-3bf8-cf01-d647" targetId="3cc8-db02-fde9-08e2"/>
+        <categoryLink name="C.A.R.C.A.S.S" hidden="false" id="aa6e-195e-a402-023c" targetId="default-category"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="Max 3 Scions" field="error">
