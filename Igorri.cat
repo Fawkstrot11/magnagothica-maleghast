@@ -976,7 +976,4 @@
       </categoryLinks>
     </selectionEntry>
   </selectionEntries>
-  <catalogueLinks>
-    <catalogueLink type="catalogue" name="C.A.R.C.A.S.S" id="bc11-a489-68bc-aecd" targetId="3db9-af2c-a9c6-7c90" importRootEntries="true"/>
-  </catalogueLinks>
 </catalogue>
