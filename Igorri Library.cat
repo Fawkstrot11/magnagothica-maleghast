@@ -136,6 +136,9 @@
       <categoryLinks>
         <categoryLink name="Igorri" hidden="false" id="ae70-64ae-50e1-1be2" targetId="d1ab-0322-0ce3-aa74" primary="true"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2417-47ba-7f3b-ba0c" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Homonculus" hidden="false" id="6ff3-3439-b56b-3507">
       <modifiers>
@@ -275,6 +278,9 @@
       <infoLinks>
         <infoLink name="Tyrant" id="3c65-85ad-c3b7-1ef0" hidden="false" type="profile" targetId="d174-18f9-73dc-aeb7"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2502-e0ba-b346-8108" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Lycan" hidden="false" id="d7e7-7f87-d073-fc92">
       <modifiers>
@@ -405,6 +411,9 @@
       <categoryLinks>
         <categoryLink name="Igorri" hidden="false" id="7fd7-8e52-100c-af8d" targetId="d1ab-0322-0ce3-aa74" primary="true"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="006a-7252-3e9d-ec1f" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Stitch" hidden="false" id="4ee6-9535-48a3-8353">
       <modifiers>
@@ -538,6 +547,9 @@
       <categoryLinks>
         <categoryLink name="Igorri" hidden="false" id="990e-006d-2d3e-13e8" targetId="d1ab-0322-0ce3-aa74" primary="true"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8cae-5f70-074a-7b46" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Strigoi" hidden="false" id="71a6-e061-67c9-19b5">
       <modifiers>
@@ -668,6 +680,9 @@
       <categoryLinks>
         <categoryLink name="Igorri" hidden="false" id="46fa-bb06-d516-fd58" targetId="d1ab-0322-0ce3-aa74" primary="true"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ec60-4ad0-63e2-c200" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
   </selectionEntries>
 </catalogue>

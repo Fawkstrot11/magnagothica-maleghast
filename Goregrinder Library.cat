@@ -134,6 +134,9 @@
       <categoryLinks>
         <categoryLink name="Goregrinders" hidden="false" id="0d61-b5af-306a-1e58" targetId="5af0-cb14-7924-1f8a" primary="true"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4581-4ca9-5480-5e1a" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Pain Ghoul" hidden="false" id="e8ae-0c59-b9ed-8f66">
       <modifiers>
@@ -268,6 +271,9 @@
       <categoryLinks>
         <categoryLink name="Goregrinders" hidden="false" id="45b1-4381-eed4-f44c" targetId="5af0-cb14-7924-1f8a" primary="true"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3975-029a-d26d-088e" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Painwheel" hidden="false" id="f807-5e2e-0c81-ee69">
       <modifiers>
@@ -401,6 +407,9 @@
       <categoryLinks>
         <categoryLink name="Goregrinders" hidden="false" id="7c5f-5d05-8a8e-8e51" targetId="5af0-cb14-7924-1f8a" primary="true"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="82d4-cca0-7e5c-b813" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Warhead" hidden="false" id="68d5-fe6e-b060-0e02">
       <modifiers>
@@ -536,6 +545,9 @@
       <categoryLinks>
         <categoryLink name="Goregrinders" hidden="false" id="8c8f-c7ee-9f01-e6c2" targetId="5af0-cb14-7924-1f8a" primary="true"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8719-ad8f-242c-b0e8" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Berserker" hidden="false" id="3b74-b3d6-c0a7-f21e">
       <modifiers>
@@ -676,6 +688,9 @@
       <categoryLinks>
         <categoryLink name="Goregrinders" hidden="false" id="d929-005f-7b46-fdd8" targetId="5af0-cb14-7924-1f8a" primary="true"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7816-8ade-4f1e-b558" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
   </selectionEntries>
   <sharedProfiles>

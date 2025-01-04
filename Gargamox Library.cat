@@ -130,6 +130,9 @@
       <categoryLinks>
         <categoryLink name="Gargamox" hidden="false" id="ff59-ab5a-b347-dd53" targetId="be1c-cc99-0e7e-e1bc" primary="true"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="56ba-8870-3693-dc89" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Leech" hidden="false" id="32ab-5798-1417-0c32">
       <modifiers>
@@ -266,6 +269,9 @@
       <categoryLinks>
         <categoryLink name="Gargamox" hidden="false" id="6aa9-09e7-e487-0d06" targetId="be1c-cc99-0e7e-e1bc" primary="true"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5b3e-864c-6b20-a9d7" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Rotten" hidden="false" id="86a7-1263-6301-d392">
       <modifiers>
@@ -402,6 +408,9 @@
       <categoryLinks>
         <categoryLink name="Gargamox" hidden="false" id="a12f-555f-79c7-a501" targetId="be1c-cc99-0e7e-e1bc" primary="true"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ae5b-a62a-cb02-cae7" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Scum" hidden="false" id="b53b-3f72-2f6e-1796">
       <modifiers>
@@ -535,6 +544,9 @@
       <categoryLinks>
         <categoryLink name="Gargamox" hidden="false" id="b339-1a7e-1f03-f3c0" targetId="be1c-cc99-0e7e-e1bc" primary="true"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bf1e-fa22-c763-b89c" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Slime" hidden="false" id="a772-8971-f7bd-add4">
       <modifiers>
@@ -665,6 +677,9 @@
       <categoryLinks>
         <categoryLink name="Gargamox" hidden="false" id="8162-d577-a19a-dd78" targetId="be1c-cc99-0e7e-e1bc" primary="true"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="50ec-5036-41d7-73d2" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
   </selectionEntries>
 </catalogue>

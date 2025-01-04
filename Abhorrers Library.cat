@@ -134,6 +134,9 @@
       <categoryLinks>
         <categoryLink name="Abhorrers" hidden="false" id="b403-49cf-2af4-68c8" targetId="dd9c-8870-f753-7d1f" primary="true"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a600-ef75-47f5-0213" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Holy Body" hidden="false" id="0f71-ec9a-85c4-718d">
       <modifiers>
@@ -278,6 +281,9 @@
       <infoLinks>
         <infoLink name="Tyrant" id="b782-b785-7f86-eb81" hidden="false" type="profile" targetId="d174-18f9-73dc-aeb7"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9e36-7c6c-be7b-e869" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Inquisitor" hidden="false" id="47e3-645b-256d-1a92">
       <modifiers>
@@ -406,6 +412,9 @@
       <infoLinks>
         <infoLink name="Miracle" id="69f4-f430-5d50-1df8" hidden="false" type="profile" targetId="e20f-88dd-f1fb-da80"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6481-d2ad-f766-9440" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Penitent" hidden="false" id="cc0c-518d-7154-fb50">
       <modifiers>
@@ -540,6 +549,9 @@
       <infoLinks>
         <infoLink name="Miracle" id="6673-2e68-14a5-39ba" hidden="false" type="profile" targetId="e20f-88dd-f1fb-da80"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="05d4-f657-e7d1-9c59" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Zealot" hidden="false" id="5bb9-3186-cceb-3af1">
       <modifiers>
@@ -673,6 +685,9 @@
       <infoLinks>
         <infoLink name="Miracle" id="a424-c7b8-6863-efa2" hidden="false" type="profile" targetId="e20f-88dd-f1fb-da80"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8214-6e88-883d-3066" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
