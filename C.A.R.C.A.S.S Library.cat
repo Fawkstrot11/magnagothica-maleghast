@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogue library="true" id="b8d0-97b8-3d9b-cd8f" name="C.A.R.C.A.S.S Library" gameSystemId="sys-8df6-50db-7b5c-4327" gameSystemRevision="3" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+  <selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Operator" hidden="false" id="a6ac-0c98-2bd9-5f0e">
+      <categoryLinks>
+        <categoryLink name="Necromancer" hidden="false" id="a10d-a0c7-f52d-b465" targetId="3cc8-db02-fde9-08e2" primary="true"/>
+        <categoryLink name="C.A.R.C.A.S.S" hidden="false" id="f5d4-56d8-a785-9770" targetId="default-category" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Operator" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="9469-fc4d-26c0-1eec">
+          <characteristics>
+            <characteristic name="MV" typeId="3a45-1de9-4165-567d">4</characteristic>
+            <characteristic name="HP" typeId="914e-de99-a8db-b243">8</characteristic>
+            <characteristic name="DF" typeId="d175-cb07-4f96-219f">4+</characteristic>
+            <characteristic name="ARM" typeId="0958-7962-327d-e229">PHYS</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Hot Clip" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="0180-41f9-37e5-473a">
+          <characteristics>
+            <characteristic name="Description" typeId="944b-4672-5052-d884">Once a round, reloading grants you 1 strength and causes your next attack to inflict +1 vulnerable on hit.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Akimbo" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="3a98-0519-72cd-8fb5">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, range 2-4, reload.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 2 damage. Effect (4+): one other foe in range takes, (6+) one other foe in range takes 1 damage.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Reload Slide" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="97df-a41e-6510-f5ad">
+          <characteristics>
+            <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441">1 SOUL</characteristic>
+            <characteristic name="Description" typeId="58e5-be14-c9fc-4761">Own or allied turn. Effect: Step 1, then you or an adjacent ally reload.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Bullet Time" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="2046-1f92-2321-0a3c">
+          <characteristics>
+            <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441">1 SOUL</characteristic>
+            <characteristic name="Description" typeId="58e5-be14-c9fc-4761">Own turn. Effect: Clear one (5+) or two negative tokens. Ranged attacks automatically miss you until the end of your next turn (5+) and you are immune to splash and line damage for the duration.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Formation" id="efb8-5d13-c26a-4ae8" hidden="false" type="profile" targetId="82c5-5625-d290-3db4"/>
+        <infoLink name="Vulnerability" id="b6bf-e669-0e35-ca92" hidden="false" type="rule" targetId="12d4-7a17-5ac1-b90f"/>
+        <infoLink name="Strength" id="6a5b-2042-9ef4-3fd7" hidden="false" type="rule" targetId="a5b3-0dfb-ad2a-e9a9"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="2b1a-c13c-935b-c79e" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="94a4-ed43-b5f4-58d4" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Upgrades" hidden="false" id="1b35-7459-b031-4183" flatten="false" collective="false">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Bonus Trait" id="41d9-182c-ba78-0b16" hidden="false" sortIndex="1" collapsible="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Bone Wall" hidden="false" id="9f07-13aa-7ef4-29e8" sortIndex="1">
+                  <profiles>
+                    <profile name="Bone Wall" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="e20b-2ddf-a940-6339">
+                      <characteristics>
+                        <characteristic name="Description" typeId="944b-4672-5052-d884">You can use your units as cover. While in cover your abilities gain +2 range.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5b81-213b-6ddd-7ff8" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Gun Kata" hidden="false" id="aa65-f030-a977-6d5d" sortIndex="2">
+                  <profiles>
+                    <profile name="Gun Kata" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="d97b-0cbc-bc15-fd1d">
+                      <characteristics>
+                        <characteristic name="Description" typeId="944b-4672-5052-d884">Ranged attacks gain a minimum range of 1 and push units 1 if they are adjacent.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2150-9c7f-cea5-3414" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Clutch Reload" hidden="false" id="4ce9-a9ad-ea70-8ef5" sortIndex="3">
+                  <profiles>
+                    <profile name="Clutch Reload" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="07f2-7514-fedf-edfc">
+                      <characteristics>
+                        <characteristic name="Description" typeId="944b-4672-5052-d884">Your ranged attacks gain headshot: reload.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d533-1e55-0c9d-56b8" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="6397-43e3-13df-6991" includeChildSelections="true"/>
+                <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="0447-798c-e880-6e9e" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7448-f0c1-5af6-4fa4" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="ACT Upgrades" id="396a-7000-1e5e-b2c7" hidden="false" sortIndex="2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="5717-abeb-314e-eff8" includeChildSelections="true"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Grenade Jump" hidden="false" id="7eb2-f056-e0d2-653e" sortIndex="1">
+                  <profiles>
+                    <profile name="Grenade Jump" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="e92b-b2bd-64a1-3f5c">
+                      <characteristics>
+                        <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+                        <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Splash (self): 1 fire damage, then step 2 with free movement.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a1e4-7cc6-c7eb-8606" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Armor Lock" hidden="false" id="e077-239b-6ac2-3e88" sortIndex="2">
+                  <profiles>
+                    <profile name="Armor Lock" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="b59c-6e1c-ba70-a886">
+                      <characteristics>
+                        <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+                        <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Push all adjacent foes 1. Until the end of your next turn, you gain super armor, cover from all directions, and allied units can use as a cover object. You cannot MOVE, step or be pushed or pulled for the same duration.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8a49-888d-40c8-eae2" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Devil Bullet" hidden="false" id="af08-6f6d-cb51-aaf8" sortIndex="3">
+                  <profiles>
+                    <profile name="Grenade Jump" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="cca5-1ad5-1c3f-14d7">
+                      <characteristics>
+                        <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+                        <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Reload. Your next attack ignores armor, and automatically triggers headshot effects on hit.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3930-503c-3c71-1f8b" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Superkick" hidden="false" id="6b39-9bd2-dce9-bb02" sortIndex="4">
+                  <profiles>
+                    <profile name="Superkick" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="13e1-decf-2935-2dfa">
+                      <characteristics>
+                        <characteristic name="Tags" typeId="fbca-defb-da52-e439">Melee.</characteristic>
+                        <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Push an adjacent unit 3. Foes gain 1 vulnerable if they would be pushed into a wall or elevated space.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3253-9779-dbc9-acb9" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="LV4 Living Cannon" hidden="false" id="0a8b-69d4-de78-3060" sortIndex="5">
+                  <profiles>
+                    <profile name="Superkick" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="e041-d982-8252-2352">
+                      <characteristics>
+                        <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, range 3-6, reload*.</characteristic>
+                        <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 fire damage and 1 vulnerable. Splash (target): 1 fire damage. Headshot: Splash (target) 1 vulnerable. *Effect: Must reload twice before this is usable.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4c19-2ed9-496f-9e04" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="SG88 Two-Barrel Shotgun" hidden="false" id="6cf2-215b-0044-43b7" sortIndex="6">
+                  <profiles>
+                    <profile name="SG88 Two-Barrel Shotgun" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="d4ca-737e-2ca5-260e">
+                      <characteristics>
+                        <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, range 2-2, reload.</characteristic>
+                        <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage, then 1 damage. Effect: push 1, then push 1. Headshot: Reload</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1e56-1674-028f-2c1a" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Unholy Sixgun" hidden="false" id="a138-1ea4-bba8-3eda" sortIndex="7">
+                  <profiles>
+                    <profile name="Unholy Sixgun" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="d5fd-6a83-ecd3-7c45">
+                      <characteristics>
+                        <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, Range 2-4, reload.</characteristic>
+                        <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 2 damage. Headshot: this attack deals +1 base damage on hit for the rest of combat, up to a maximum of 4.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1599-bb2e-1309-2552" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="SOUL Upgrades" id="4a65-e56f-0e47-a2f3" hidden="false" sortIndex="3">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Double Tap" hidden="false" id="ebc7-10e6-d69b-fffc" sortIndex="1">
+                  <profiles>
+                    <profile name="Double Tap" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="e823-b0f7-1241-e62d">
+                      <characteristics>
+                        <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441"/>
+                        <characteristic name="Description" typeId="58e5-be14-c9fc-4761"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="686a-2eae-79d0-3d46" includeChildSelections="true"/>
+                  </constraints>
+                  <costs>
+                    <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Frag Bullet" hidden="false" id="92ca-664c-0bb6-5d09" sortIndex="2">
+                  <profiles>
+                    <profile name="Frag Bullet" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="a4cd-1b12-7f0b-f9f6">
+                      <characteristics>
+                        <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441"/>
+                        <characteristic name="Description" typeId="58e5-be14-c9fc-4761"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d61f-8979-20af-89ef" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Bullet Hustle" hidden="false" id="0d2b-aaf7-3cd8-4ac0" sortIndex="3">
+                  <profiles>
+                    <profile name="Bullet Hustle" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="b634-3862-9920-ed30">
+                      <characteristics>
+                        <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441"/>
+                        <characteristic name="Description" typeId="58e5-be14-c9fc-4761"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="048d-9c6e-cc09-8738" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Overwatch" hidden="false" id="4218-987c-8d14-719a" sortIndex="4">
+                  <profiles>
+                    <profile name="Overwatch" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="a925-7a57-af48-9589">
+                      <characteristics>
+                        <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441"/>
+                        <characteristic name="Description" typeId="58e5-be14-c9fc-4761"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="510c-f1f3-3e9b-110f" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Bullet Sonata" hidden="false" id="52bb-aeec-046e-8842" sortIndex="5">
+                  <profiles>
+                    <profile name="Bullet Sonata" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="a33e-12b0-4ef9-a35d">
+                      <characteristics>
+                        <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441"/>
+                        <characteristic name="Description" typeId="58e5-be14-c9fc-4761"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b559-d767-f1f0-e44e" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="S.T.G" hidden="false" id="af6f-09a4-1617-1253" sortIndex="6">
+                  <profiles>
+                    <profile name="S.T.G" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="c7ce-f775-8852-71b1">
+                      <characteristics>
+                        <characteristic name="Cost" typeId="15ce-d5e6-ad21-f441"/>
+                        <characteristic name="Description" typeId="58e5-be14-c9fc-4761"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fe51-db8a-f398-2cb3" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="dd27-0912-bf98-d879" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ca5e-3ae2-98c7-53c2" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="15b6-a318-e9a7-ead8" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="adc9-c7eb-92f5-33f9">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="self" childId="any" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="adc9-c7eb-92f5-33f9">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="adc9-c7eb-92f5-33f9">
+              <conditions>
+                <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="adc9-c7eb-92f5-33f9">
+              <conditions>
+                <condition type="atLeast" value="3" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Ammo Goblin" hidden="false" id="7569-00e3-91b6-4725">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="caa5-c1c0-4099-044a" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Ammo Goblin" hidden="false" id="9db7-89df-d3cd-24ba">
+          <profiles>
+            <profile name="Ammo Goblin" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="a2a4-04d7-876c-082b">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">3</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">4+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0432-397c-dfbc-fdcb" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Freak" hidden="false" id="107a-e919-625c-7ad7" targetId="caa5-c1c0-4099-044a" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Regurgitate Ammo" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="390a-d9f0-9ba3-78ae">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 3.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: A unit in range reloads and gains one, (6+) or two strength.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Bone Shards" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="5830-437d-4ee5-4767">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, melee, push.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Unit takes 1 damage after any ACT ability resolves that pushes or pulls them. Lasts until end of this units next turn or until this unit has taken 3 damage this way.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Destructive Glee" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="bfc1-194a-afdb-6b19">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Step 1, then Splash (self): 1 fire damage, push 1, and inflict 1 vulnerable, then self is obliterated.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Formation" id="6667-2149-1893-30e4" hidden="false" type="profile" targetId="82c5-5625-d290-3db4"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="6138-c0ec-dfca-f234" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Vomit Bullets" hidden="false" id="0d85-fd9a-0846-38a7" sortIndex="1">
+              <profiles>
+                <profile name="Vomit Bullets" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="3cd4-6a9a-39cd-dba3">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Bone shards gains effect: (4+) push 1, (6) push 1 again.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="716d-b1be-1045-33f1" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hot Chamber" hidden="false" id="8b42-6bf0-a57a-d4ad">
+              <profiles>
+                <profile name="Hot Chamber" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="ee91-5319-639d-a9ce">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Regurgitate Ammo can target two different adjacent units, but no longer grants strength.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="def4-90b5-9486-b723" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Napalm Injector" hidden="false" id="69c1-660d-abbd-7f40" sortIndex="2">
+              <profiles>
+                <profile name="Napalm Injector" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="1a3d-6559-ece9-6ff6">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Destructive Glee’s splash effect gains effect (4+): +1 fire damage (6+): and +1 vulnerable</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="acf0-e428-30f9-93a0" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="6021-395b-3e98-9619" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="C.A.R.C.A.S.S" hidden="false" id="6d9e-cd6a-ec6d-3c6d" targetId="default-category" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Barrelform" hidden="false" id="ac2a-522c-ed01-0a2e">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="77f9-1904-4c54-414d" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Barrelform" hidden="false" id="836d-0de0-9be8-e0f0">
+          <profiles>
+            <profile name="Barrelform" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="3fa3-f311-8957-aad2">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">2</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">4+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d515-4ea7-5dbc-714d" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Hunter" hidden="false" id="815a-47fe-8210-92db" targetId="77f9-1904-4c54-414d" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Transform to Gun" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="0ced-dbaf-1f25-abe8">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Unit becomes unable to MOVE or step, but ranged abilities gain +2 maximum range and ignore armor and cover. It can end this effect by sacrificing a MOVE, but if it does, it loses all associate effects.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Snipe" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="2b81-333b-1ed7-a006">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, range 2-4, reload.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 2 damage. Headshot: and inflict 1 vulnerable.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Deathmark" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="7e15-a225-2af8-7425">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Curse, Range 2-4.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Inflict 2 vulnerable, (3+): 3 vulnerable, (5+): Remove any vitality first.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Formation" id="aa1e-06ea-32ba-2c40" hidden="false" type="profile" targetId="82c5-5625-d290-3db4"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="1196-5fae-0afa-f729" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Claw Pitons" hidden="false" id="3ea7-6d29-f89d-e1ff" sortIndex="1">
+              <profiles>
+                <profile name="Claw Pitons" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="1f44-ddd7-57cc-7b9a">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Transform to Gun makes this unit immune to push and pull.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5b34-0868-2165-c86e" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Calibur Up" hidden="false" id="5ba0-dba8-ef35-1551">
+              <profiles>
+                <profile name="Calibur Up" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="fbb2-5ffd-8cdb-e89b">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Snipe gains push 1 and Headshot: push 2.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="be9a-946a-cb5e-816a" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Extended Barrel" hidden="false" id="0f88-fed6-ce46-6cb3" sortIndex="2">
+              <profiles>
+                <profile name="Extended Barrel" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="e779-2286-00f7-dd7a">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Snipe gains +1D when this unit is in cover, and -1D when it is not.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f35-f8e3-3fb4-9f46" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0031-de31-5978-887b" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="C.A.R.C.A.S.S" hidden="false" id="0207-d089-4822-0e04" targetId="default-category" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="EGIS Weapon" hidden="false" id="fb93-f702-eaa8-65b8">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="6989-702c-1324-ecad" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="EGIS Weapon" hidden="false" id="88a4-953a-008b-7a2d">
+          <profiles>
+            <profile name="EGIS Weapon" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="b87d-6943-00a4-0e97">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">3</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">6</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">2+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">PHYS</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e699-2c2e-96dc-337e" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Tyrant" hidden="false" id="b514-55da-e848-fb69" targetId="6989-702c-1324-ecad" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Catechism Devil Cannon" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="dd4e-3f40-f49c-e957">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Line, reload.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Line 5, 1 fire damage. and inflicts 1 vulnerable on the first unit in the line. Pierces through walls and can target through walls.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Mortar" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="9d93-c177-db76-fed1">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, range 2-3, reload.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage then Splash: 1 fire damage. Headshot: +1 damage on main target</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Juggernaut" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="ea12-6195-48d1-bdf5">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self, Push.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Step 1, then splash (self) push foes 1. (5+) push foes 2. May move into and destroy walls with this step.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Tyrant" id="f074-6359-258a-42c1" hidden="false" type="profile" targetId="d174-18f9-73dc-aeb7"/>
+        <infoLink name="Formation" id="3b77-49ef-352f-66f4" hidden="false" type="profile" targetId="82c5-5625-d290-3db4"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="3e06-4064-287c-cc39" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Fortify" hidden="false" id="60e4-acea-a13a-e4b8" sortIndex="1">
+              <profiles>
+                <profile name="Fortify" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="0638-d383-c84a-ad1f">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Juggernaut also clears all negative tokens.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e679-0f9d-7983-b3d7" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Gunner Pivot" hidden="false" id="6509-4f4c-9734-3396">
+              <profiles>
+                <profile name="Gunner Pivot" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="3d6e-1ca5-e8ef-91cc">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">When at least one ally is adjacent to this unit, Mortar ignores cover.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b682-0666-bbba-9957" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavy Caliber Cannon" hidden="false" id="d474-a935-74c6-1d19" sortIndex="2">
+              <profiles>
+                <profile name="Heavy Caliber Cannon" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="eeb0-f9f5-0f45-c3f2">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Catechism pushes all units in the line 1 space and destroys all walls.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1d98-2b3e-ec69-2b16" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="112b-fbb9-9998-0d24" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="C.A.R.C.A.S.S" hidden="false" id="36f5-6d92-1c2a-f70b" targetId="default-category" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Enforcer" hidden="false" id="d295-3981-0d36-d43d">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="self" childId="c411-bd0a-19ee-618a" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Enforcer" hidden="false" id="db1e-1a6c-f93d-a601">
+          <profiles>
+            <profile name="Enforcer" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="587a-693b-393d-83a8">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">3</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">4</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">3+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">PHYS</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ccec-e25b-bdbd-6d36" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Scion" hidden="false" id="de42-c86e-670e-dcd9" targetId="c411-bd0a-19ee-618a" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Flashbang" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="2753-f236-586b-be2a">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 2-3, Reload, splash</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: 1 fire damage and 1 vulnerable, then Splash (target): push 1 away from target.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Shieldwall" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="6de6-c13a-6005-2cca">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Self.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Until start of this unit’s next turn, this unit cannot MOVE, step, or be pushed or pulled, gains cover, and grants cover to adjacent allies from all directions.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Skull Crack" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="3f4e-01d7-5ce5-eef3">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, melee, push.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 2 damage and push 1. Headshot: push 2</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Formation" id="ad50-0d93-9e59-3907" hidden="false" type="profile" targetId="82c5-5625-d290-3db4"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="1309-0906-d776-75bb" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Shield Charge" hidden="false" id="c6a4-0b78-cfbb-9ae7" sortIndex="1">
+              <profiles>
+                <profile name="Shield Charge" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="d21f-7e17-646f-7e68">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Unit may step 1 before using Skull Crack and it gains splash (self) push foes 1.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2cfe-ca6f-ba3b-1059" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Bone Dust Napalm" hidden="false" id="31de-7d52-a363-2f14">
+              <profiles>
+                <profile name="Bone Dust Napalm" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="f76a-214e-5a07-f562">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Flashbang deals 1 splash fire damage but no longer deals vuln or damage to its main target.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6994-9009-fa0f-f052" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Bulwark" hidden="false" id="dc69-fd74-a143-849b" sortIndex="2">
+              <profiles>
+                <profile name="Bulwark" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="7684-c683-5bcb-36a4">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Shieldwall also clears up to two negative tokens on self or adjacent allies.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="277e-cb3d-fea4-826c" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="511f-159f-a1bd-1b08" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="C.A.R.C.A.S.S" hidden="false" id="d1d3-1b06-515d-1be8" targetId="default-category" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Gunwight" hidden="false" id="1247-397c-4bfb-6790">
+      <modifiers>
+        <modifier type="increment" value="1" field="381b-285c-52d7-1bd1">
+          <repeats>
+            <repeat value="2" repeats="1" field="selections" scope="self" childId="d26e-9892-d83f-2828" shared="true" roundUp="true" percentValue="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Gunwight" hidden="false" id="8f83-e138-1de4-17f3">
+          <profiles>
+            <profile name="Gunwight" typeId="41cc-7054-d4e7-251b" typeName="Unit" hidden="false" id="52e7-7054-49e6-b2e6">
+              <characteristics>
+                <characteristic name="MV" typeId="3a45-1de9-4165-567d">2</characteristic>
+                <characteristic name="HP" typeId="914e-de99-a8db-b243">2</characteristic>
+                <characteristic name="DF" typeId="d175-cb07-4f96-219f">4+</characteristic>
+                <characteristic name="ARM" typeId="0958-7962-327d-e229">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1402-d6ff-ab89-40cb" includeChildSelections="false"/>
+          </constraints>
+          <categoryLinks>
+            <categoryLink name="Thrall" hidden="false" id="aa7d-d605-6ae2-0baa" targetId="d26e-9892-d83f-2828" primary="false"/>
+          </categoryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="OL45" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="903a-bd7e-1914-2527">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Attack, range 2-3, reload.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage, ignoring armor. Headshot: inflict 1 vulnerable</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Baton" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="0120-8c2b-6264-5b2e">
+          <characteristics>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Push, melee</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Push 1 and (3+) inflict 1 vulnerable.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Thrall" id="7462-d113-aa77-09ba" hidden="false" type="profile" targetId="6d91-8f5b-427e-0608"/>
+        <infoLink name="Formation" id="6b70-dbee-d486-8322" hidden="false" type="profile" targetId="82c5-5625-d290-3db4"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="403c-ee85-63ec-155c" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Brace" hidden="false" id="2c12-2ba7-d9b1-3f5c" sortIndex="1">
+              <profiles>
+                <profile name="Brace" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="9d11-2118-66d8-04d6">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">While in cover, attacks gain +1 max range and push 1 on hit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6bfd-0943-d0dc-7062" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Tactical Reload" hidden="false" id="0f6a-0ff6-bc52-936b" sortIndex="2">
+              <profiles>
+                <profile name="Tactical Reload" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="ca03-52bc-6431-a223">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">Gain Headshot: reload and gain 1 strength</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db5c-e053-ba01-aeb7" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Scavenge Ammo" hidden="false" id="3039-06db-ed53-3e83" sortIndex="3">
+              <profiles>
+                <profile name="Scavenge Ammo" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="3397-edb8-a12e-5384">
+                  <characteristics>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">May consume one adjacent corpse before or after ACTing to reload and gain 1 strength.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="Slots" typeId="381b-285c-52d7-1bd1" value="0"/>
+                <cost name="Dark Power" typeId="adc9-c7eb-92f5-33f9" value="1"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f442-bf5c-24ee-808c" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="933f-c0ea-40c3-b3b2" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="Can only have two Upgrades in Ultrahell" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="2" field="selections" scope="self" childId="any" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="adc9-c7eb-92f5-33f9" scope="roster" childId="any" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="C.A.R.C.A.S.S" hidden="false" id="ed47-af06-f97a-37e6" targetId="default-category" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+  </selectionEntries>
+  <sharedProfiles>
+    <profile name="Formation" typeId="93b3-c447-4e71-15e2" typeName="Trait" hidden="false" id="82c5-5625-d290-3db4">
+      <characteristics>
+        <characteristic name="Description" typeId="944b-4672-5052-d884">While adjacent to an ally, gain +1D on attacks.</characteristic>
+      </characteristics>
+    </profile>
+  </sharedProfiles>
+</catalogue>

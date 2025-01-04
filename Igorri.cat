@@ -5,6 +5,7 @@
       <categoryLinks>
         <categoryLink name="Necromancer" hidden="false" id="6f52-8147-d79d-b112" targetId="3cc8-db02-fde9-08e2"/>
         <categoryLink name="Igorri" hidden="false" id="c637-dced-32ca-15ae" targetId="d1ab-0322-0ce3-aa74"/>
+        <categoryLink name="C.A.R.C.A.S.S" hidden="false" id="4781-d38c-d811-00e2" targetId="default-category" type="category"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="Max 3 Scions" field="error">
@@ -976,6 +977,6 @@
     </selectionEntry>
   </selectionEntries>
   <catalogueLinks>
-    <catalogueLink type="catalogue" name="C.A.R.C.A.S.S" id="8c49-95d3-86dd-6b8d" targetId="3db9-af2c-a9c6-7c90" importRootEntries="true"/>
+    <catalogueLink type="catalogue" name="C.A.R.C.A.S.S Library" id="bc11-a489-68bc-aecd" targetId="b8d0-97b8-3d9b-cd8f" importRootEntries="true"/>
   </catalogueLinks>
 </catalogue>
