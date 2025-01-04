@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="4b73-f0f7-dc69-3d70" name="Deadsouls" gameSystemId="sys-8df6-50db-7b5c-4327" gameSystemRevision="3" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="4b73-f0f7-dc69-3d70" name="Deadsouls" gameSystemId="sys-8df6-50db-7b5c-4327" gameSystemRevision="3" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <forceEntries>
     <forceEntry name="Black Mass" id="872c-e107-2cdf-8193" hidden="false">
       <categoryLinks>
@@ -232,7 +232,7 @@
               <profiles>
                 <profile name="Strong Pact" typeId="61a8-2fd6-c199-1e7f" typeName="Upgrade" hidden="false" id="f573-b170-d6d2-67f8">
                   <characteristics>
-                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">This unit is curseproof</characteristic>
+                    <characteristic name="Description" typeId="8212-ed36-7cfa-7c01">This unit is curseproof.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
