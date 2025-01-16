@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="e9fd-1024-b7e8-1ff4" name="Abhorrers" gameSystemId="sys-8df6-50db-7b5c-4327" gameSystemRevision="3" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="e9fd-1024-b7e8-1ff4" name="Abhorrers" gameSystemId="sys-8df6-50db-7b5c-4327" gameSystemRevision="3" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Exorcist" hidden="false" id="01ca-9aea-acde-a9c9">
       <categoryLinks>
