@@ -23,7 +23,7 @@
         <profile name="Starmetal Godsword" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="0b3a-1382-d9b5-96d3">
           <characteristics>
             <characteristic name="Tags" typeId="fbca-defb-da52-e439">Melee, Attack.</characteristic>
-            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Lacks Miracle. However, while alive, miracle triggers for adjacent allies on a 4+, and gain 1 SOUL the first time it triggers in a round.</characteristic>
+            <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">On hit: 1 damage. Stance (Odd): and step 2, Stance (Even): and gain 1 vitality, Stance (Round 5+): Increase damage to 3</characteristic>
           </characteristics>
         </profile>
         <profile name="Absolution" typeId="be7b-ff93-a5bf-e3c2" typeName="Soul" hidden="false" id="0323-24d7-0e1f-85f6">
