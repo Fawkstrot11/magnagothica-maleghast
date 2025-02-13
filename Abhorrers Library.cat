@@ -190,7 +190,7 @@
         </profile>
         <profile name="Indignation" typeId="8ef4-e520-63f4-18f4" typeName="Active" hidden="false" id="916e-b31f-76d1-e417">
           <characteristics>
-            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Melee, Attack.</characteristic>
+            <characteristic name="Tags" typeId="fbca-defb-da52-e439">Range 3-6</characteristic>
             <characteristic name="Description" typeId="f9bb-6dfb-9e8e-dd26">Effect: Remove one or two vitality tokens on this unit, then deal 1 holy damage to that many units in range, and push those units 1.</characteristic>
           </characteristics>
         </profile>
